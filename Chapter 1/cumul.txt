@@ -1,0 +1,6 @@
+Class;Value
+1;"# observations in Class 1"
+2;"# observations in Classes 1 and 2"
+3;"# observations in Classes 1, 2 and 3"
+4;"# observations in Classes 1, 2, 3 and 4"
+5;"# observations in Classes 1, 2, 3, 4 and 5, i.e. the total"

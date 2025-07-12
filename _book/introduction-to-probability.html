@@ -1,0 +1,1678 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Introduction to Probability | STC 147 Class Notes</title>
+  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+set in the _output.yml file.
+The HTML output format for this example is bookdown::gitbook,</p>" />
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Introduction to Probability | STC 147 Class Notes" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+set in the _output.yml file.
+The HTML output format for this example is bookdown::gitbook,</p>" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Introduction to Probability | STC 147 Class Notes" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+set in the _output.yml file.
+The HTML output format for this example is bookdown::gitbook,</p>" />
+  
+
+<meta name="author" content="Department of Statistics, University of Pretoria" />
+
+
+<meta name="date" content="2025-07-12" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="descriptive-statistics.html"/>
+<link rel="next" href="inferential-statistics.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">STC 147 Class Notes</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html"><i class="fa fa-check"></i><b>1</b> Descriptive Statistics</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#what-is-descriptive-statistics"><i class="fa fa-check"></i><b>1.1</b> What is Descriptive Statistics?</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#example"><i class="fa fa-check"></i><b>1.1.1</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#tabulating-qualitative-data"><i class="fa fa-check"></i><b>1.2</b> Tabulating qualitative data</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#frequency-tables"><i class="fa fa-check"></i><b>1.2.1</b> Frequency tables</a></li>
+<li class="chapter" data-level="1.2.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#relative-frequency-and-percent-frequency"><i class="fa fa-check"></i><b>1.2.2</b> Relative frequency and percent frequency</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#tabulating-quantitative-data"><i class="fa fa-check"></i><b>1.3</b> Tabulating quantitative data</a></li>
+<li class="chapter" data-level="1.4" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#cumulative-frequencies"><i class="fa fa-check"></i><b>1.4</b> Cumulative frequencies</a></li>
+<li class="chapter" data-level="1.5" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#data-visualisation"><i class="fa fa-check"></i><b>1.5</b> Data Visualisation</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#histograms-with-analysis-toolpack"><i class="fa fa-check"></i><b>1.5.1</b> Histograms with analysis toolpack</a></li>
+<li class="chapter" data-level="1.5.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#bar-charts"><i class="fa fa-check"></i><b>1.5.2</b> Bar charts</a></li>
+<li class="chapter" data-level="1.5.3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#pie-charts"><i class="fa fa-check"></i><b>1.5.3</b> Pie charts</a></li>
+<li class="chapter" data-level="1.5.4" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#scatterplots"><i class="fa fa-check"></i><b>1.5.4</b> Scatterplots</a></li>
+<li class="chapter" data-level="1.5.5" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#line-plots"><i class="fa fa-check"></i><b>1.5.5</b> Line plots</a></li>
+<li class="chapter" data-level="1.5.6" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#other-plots"><i class="fa fa-check"></i><b>1.5.6</b> Other plots</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#numerical-measures"><i class="fa fa-check"></i><b>1.6</b> Numerical Measures</a>
+<ul>
+<li class="chapter" data-level="1.6.1" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#example-1"><i class="fa fa-check"></i><b>1.6.1</b> Example</a></li>
+<li class="chapter" data-level="1.6.2" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#measures-of-location"><i class="fa fa-check"></i><b>1.6.2</b> Measures of location</a></li>
+<li class="chapter" data-level="1.6.3" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#measures-of-variability"><i class="fa fa-check"></i><b>1.6.3</b> Measures of variability</a></li>
+<li class="chapter" data-level="1.6.4" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#measures-of-shape-relative-location-detecting-outliers"><i class="fa fa-check"></i><b>1.6.4</b> Measures of shape, relative location &amp; detecting outliers</a></li>
+<li class="chapter" data-level="1.6.5" data-path="descriptive-statistics.html"><a href="descriptive-statistics.html#measures-of-association"><i class="fa fa-check"></i><b>1.6.5</b> Measures of association</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html"><i class="fa fa-check"></i><b>2</b> Introduction to Probability</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#sample-space-and-events"><i class="fa fa-check"></i><b>2.1</b> Sample space and events</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#sample-space"><i class="fa fa-check"></i><b>2.1.1</b> Sample space</a></li>
+<li class="chapter" data-level="2.1.2" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#events"><i class="fa fa-check"></i><b>2.1.2</b> Events</a></li>
+<li class="chapter" data-level="" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#exercises"><i class="fa fa-check"></i>Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#some-relationships-between-events"><i class="fa fa-check"></i><b>2.2</b> Some relationships between events</a>
+<ul>
+<li class="chapter" data-level="" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#exercises-1"><i class="fa fa-check"></i>Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#assigning-probabilities"><i class="fa fa-check"></i><b>2.3</b> Assigning Probabilities</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#what-is-a-probability"><i class="fa fa-check"></i><b>2.3.1</b> What is a probability?</a></li>
+<li class="chapter" data-level="2.3.2" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#objective-method"><i class="fa fa-check"></i><b>2.3.2</b> Objective method</a></li>
+<li class="chapter" data-level="2.3.3" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#classical-probability"><i class="fa fa-check"></i><b>2.3.3</b> Classical probability</a></li>
+<li class="chapter" data-level="2.3.4" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#subjective-method"><i class="fa fa-check"></i><b>2.3.4</b> Subjective method</a></li>
+<li class="chapter" data-level="" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#exercises-2"><i class="fa fa-check"></i>Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#mathematical-properties-of-probability"><i class="fa fa-check"></i><b>2.4</b> Mathematical properties of probability</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#probability-of-a-complement"><i class="fa fa-check"></i><b>2.4.1</b> Probability of a complement</a></li>
+<li class="chapter" data-level="2.4.2" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#addition-rule"><i class="fa fa-check"></i><b>2.4.2</b> Addition rule</a></li>
+<li class="chapter" data-level="" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#exercises-3"><i class="fa fa-check"></i>Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#basic-counting-rules"><i class="fa fa-check"></i><b>2.5</b> Basic counting rules</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#the-fundamental-counting-rule"><i class="fa fa-check"></i><b>2.5.1</b> The Fundamental counting rule</a></li>
+<li class="chapter" data-level="2.5.2" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#tree-diagrams"><i class="fa fa-check"></i><b>2.5.2</b> Tree Diagrams</a></li>
+<li class="chapter" data-level="2.5.3" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#combinations"><i class="fa fa-check"></i><b>2.5.3</b> Combinations</a></li>
+<li class="chapter" data-level="2.5.4" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#permutations"><i class="fa fa-check"></i><b>2.5.4</b> Permutations</a></li>
+<li class="chapter" data-level="" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#exercises-4"><i class="fa fa-check"></i>Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#finding-probabilities-using-the-basic-counting-rules"><i class="fa fa-check"></i><b>2.6</b> Finding probabilities using the basic counting rules</a>
+<ul>
+<li class="chapter" data-level="" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#exercises-5"><i class="fa fa-check"></i>Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#conditional-probabilities"><i class="fa fa-check"></i><b>2.7</b> Conditional probabilities</a>
+<ul>
+<li class="chapter" data-level="2.7.1" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#independent-events"><i class="fa fa-check"></i><b>2.7.1</b> Independent events</a></li>
+<li class="chapter" data-level="2.7.2" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#multiplication-rule"><i class="fa fa-check"></i><b>2.7.2</b> Multiplication rule</a></li>
+<li class="chapter" data-level="" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#exercises-6"><i class="fa fa-check"></i>Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="2.8" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#bayes-theorem"><i class="fa fa-check"></i><b>2.8</b> Bayes’ Theorem</a>
+<ul>
+<li class="chapter" data-level="" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#exercises-7"><i class="fa fa-check"></i>Exercises</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="inferential-statistics.html"><a href="inferential-statistics.html"><i class="fa fa-check"></i><b>3</b> Inferential Statistics</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">ClickUP</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">STC 147 Class Notes</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="introduction-to-probability" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Introduction to Probability<a href="introduction-to-probability.html#introduction-to-probability" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Now that you have learned about data, how to collect it and summarise
+it, you are now ready to make use of the sample data to draw meaningful
+conclusions about the sampled population. This process is referred to as
+<strong>inferential statistics</strong> and the essential statistical tool involved
+in this process is called <strong>probability</strong>. At its core, probability is a
+measure of our <strong>uncertainty</strong>. Everyday we are faced with
+decision-making and probability statements. Statements involving words
+such as <em>chance</em>, <em>likelihood</em>, <em>odds</em>, <em>likely</em>, <em>expected</em>,
+<em>possibility</em> and <em>probably</em> are all addressing the same issue:
+uncertainty. Every day we say, read or hear statements such as the
+following:</p>
+<ol style="list-style-type: decimal">
+<li>There is a 75% <em>chance</em> of rain today.</li>
+<li>What is the <em>likelihood</em> we will a test today?</li>
+<li>I will <em>probably</em> pass this course.</li>
+<li>The <em>odds</em> are 1 in 100 million that you will be struck by
+lightning.</li>
+<li>If a single fair coin is tossed, there is a 50-50 <em>possibility</em> that
+a head will occur.</li>
+</ol>
+<p>In statistics, probability allows you to evaluate the reliability of
+your conclusions about the population when you have only information
+from the sample data. Consider the example 5. of tossing a coin once,
+the outcome will be either a head (H) or a tail (T). Suppose, as is true
+in reality, that you don’t know whether or not the coin is fair. You
+decide to perform a simple experiment by tossing the coin <span class="math inline">\(n=10\)</span> times
+and observe <span class="math inline">\(10\)</span> heads in a row. Can you conclude that the coin is fair?
+Probably not, because a fair coin is <em>very unlikely</em> to yield <span class="math inline">\(10\)</span> heads
+in a row. It is more likely that the coin is biased.</p>
+<p>As with the coin-tossing example, in statistics we use probability in
+two ways. When the population is known (e.g. the coin is known to be
+fair), probability is used to describe the chance of observing a
+particular sample outcome. When the population is unknown (e.g. it is
+unknown whether or not the coin is fair) and only a sample from the
+population is available, probability is used to make statements about
+the population. The latter case is more likely in practice. This is the
+inferential statistics we referred to above.</p>
+<p>You know have an intuitive feeling for probability. In this chapter, we
+build on this intuition by presenting the basic mathematical concepts of
+probability along with some real-world examples.</p>
+<div id="sample-space-and-events" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Sample space and events<a href="introduction-to-probability.html#sample-space-and-events" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="sample-space" class="section level3 hasAnchor" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> Sample space<a href="introduction-to-probability.html#sample-space" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We introduce the concept of an <strong>experiment</strong> as any action or process
+that results in well-defined observations or outcomes. On any single
+repetition or <strong>trial</strong> of an experiment, one and only one possible
+outcome will occur. The following are examples of experiments and their
+possible outcomes:</p>
+<ul>
+<li><strong>Experiment</strong>: Observing the gender of a new born baby;
+<strong>Outcomes</strong>: Male, Female</li>
+<li><strong>Experiment</strong>: Toss a coin; <strong>Outcomes</strong>: Head, Tail</li>
+<li><strong>Experiment</strong>: Selecting a part for inspection; <strong>Outcomes</strong>:
+Defective, Non-defective</li>
+<li><strong>Experiment</strong>: Conducting a sales call; <strong>Outcomes</strong>: Purchase,
+No-Purchase</li>
+<li><strong>Experiment</strong>: Rolling a die; <strong>Outcomes</strong>: 1,2,3,4,5,6</li>
+<li><strong>Experiment</strong>: Play a football game; <strong>Outcomes</strong>: Win, Lose, Tie</li>
+</ul>
+<p>The outcomes of most experiments are uncertain. A set or collection of
+all possible outcomes of an experiment is called a <strong>sample space</strong> and
+it is denoted by <span class="math inline">\(S\)</span>.<br />
+The simplest experiment is one that has only two possible outcomes.
+Consider the first experiment above of observing the gender of a new
+born baby. The sample space for this experiment is given by <span class="math inline">\(S=\{M,F\}\)</span>,
+where <span class="math inline">\(M\)</span> represents male and <span class="math inline">\(F\)</span> represents female. Suppose that we
+observed the births of two new born babies, then the sample space is
+given by <span class="math inline">\(S_1=\{MM,MF,FM,FF\}\)</span>, where, for instance, <span class="math inline">\(MF\)</span> indicates that
+the first baby born was male and the second baby born was female.
+Another possible sample space for this experiment might consist of the
+number of possible male births, <span class="math inline">\(S_2=\{0,1,2\}\)</span>. As a last example,
+consider the experiment of rolling a six-sided die, here the sample
+space is given by <span class="math inline">\(S_1=\{1,2,3,4,5,6\}\)</span>. Another sample space for this
+experiment might consist of whether the number facing up is even or odd,
+<span class="math inline">\(S_2=\{E,O\}\)</span>, where <span class="math inline">\(E\)</span> represents an even number and <span class="math inline">\(O\)</span> represents an
+odd number.</p>
+<div class="example">
+<p><span id="exm:ex1" class="example"><strong>Example 2.1  </strong></span>Give the sample space for each of the following experiments.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Toss a coin first followed by a six-sided die.</li>
+<li>Toss a coin until a tail occurs</li>
+<li>Toss a R2 coin, R1 coin and R5 coin in that order</li>
+<li>A piece of metal is measured to determine what fraction of it is
+gold.</li>
+</ol>
+<p><strong>Solutions</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(S=\{H1,H2,H3,H4,H5,H6,T1,T2,T3,T4,T5,T6\}\)</span></li>
+<li><span class="math inline">\(S=\{H,TH,TTH,TTTH,TTTTH,\dots\}\)</span></li>
+<li><span class="math inline">\(S=\{HHH,HTT,HHT,HTH,THT,TTH,THH,TTT\}\)</span></li>
+<li><span class="math inline">\(S=\{p|0&lt;p&lt;1\}\)</span>, where <span class="math inline">\(p=\)</span> the proportion of the piece of metal
+that is gold</li>
+</ol>
+</div>
+</div>
+<div id="events" class="section level3 hasAnchor" number="2.1.2">
+<h3><span class="header-section-number">2.1.2</span> Events<a href="introduction-to-probability.html#events" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In the study of probability, we are often interested in determining the
+likelihood of the occurrence of a collection of outcomes instead of the
+likelihood of the occurrence of a single outcome. For instance, in an
+experiment where three coins are tossed once, we might be interested in
+the outcomes which indicate that at least two heads are observed. This
+collection of outcomes denoted by <span class="math inline">\(A\)</span>, <span class="math inline">\(A={HHT,HTH,THH,HHH}\)</span>, is called
+an <strong>event</strong>. An <strong>event</strong> is any collection or subset of the sample
+space. An event is said to be <strong>simple</strong> if it consists of exactly one
+outcome and <strong>compound</strong> if it consists of more than one outcome. When
+an experiment is performed, a particular event, say <span class="math inline">\(A\)</span>, is said to
+occur if the resulting outcome is contained in <span class="math inline">\(A\)</span>.</p>
+<p>Consider the experiment of tossing a R5 coin followed by a R1 coin. A
+sample space for this experiment could be <span class="math inline">\(S=\{HH,HT,TH,HH\}\)</span>. Some
+possible events are</p>
+<p><span class="math display">\[
+\begin{equation}
+E_1=\{HH\}\hspace{1cm}E_4=\{HH,TT\}\\
+E_2=\{HT\}\hspace{1cm}E_5=\{HT,TH\}\\
+E_3=\{TH\}\hspace{1cm}E_6=\{TT\}
+\end{equation}
+\]</span> Events <span class="math inline">\(E_1\)</span>, <span class="math inline">\(E_2\)</span>, <span class="math inline">\(E_3\)</span> and <span class="math inline">\(E_6\)</span> are simple events and events
+<span class="math inline">\(E_4\)</span> and <span class="math inline">\(E_5\)</span> are compound events. There are actually a total of 16
+possible events for the above experiment. As an exercise, identify the
+other events. Note that the <strong>empty set</strong> <span class="math inline">\(\emptyset\)</span> and the sample
+space <span class="math inline">\(S\)</span> are also events. The event <span class="math inline">\(\mathbf{E_1}\)</span> can be described as
+getting a tail on the R5 and a tail on the R1. The event <span class="math inline">\(E_4\)</span> can be
+described as getting two heads or two tails. As an exercise, describe
+the remaining events.</p>
+<div class="example">
+<p><span id="exm:ex2" class="example"><strong>Example 2.2  </strong></span>Suppose an experiment consists of randomly selecting the exam scripts of
+three students. Each student’s script can either show a pass (P) or fail
+(F). The experiment has eight possible outcomes: <span class="math inline">\(FPP\)</span>, <span class="math inline">\(FPF\)</span>, <span class="math inline">\(FFP\)</span>,
+<span class="math inline">\(FFF\)</span>, <span class="math inline">\(PFF\)</span>, <span class="math inline">\(PFP\)</span>, <span class="math inline">\(PPF\)</span> and <span class="math inline">\(FFF\)</span>. List the outcomes that correspond
+to each of the following events:</p>
+<ol style="list-style-type: lower-alpha">
+<li>The first student failed</li>
+<li>The first and last student failed</li>
+<li>All the students passed</li>
+<li>At least one student failed</li>
+<li>At most one student failed</li>
+</ol>
+<p><strong>Solutions</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(E_1= \{FPP, FPF, FFP, FFF\}\)</span></li>
+<li><span class="math inline">\(E_2= \{FFF, FPF\}\)</span></li>
+<li><span class="math inline">\(E_3 = \{PPP\}\)</span></li>
+<li>Note that at least one means one or more:</li>
+</ol>
+<p><span class="math display">\[E_4=\{PFF, PFP, PPF, FPP, FPF, FFP, FFF\}\]</span></p>
+<ol start="5" style="list-style-type: lower-alpha">
+<li>Note that at most one means one or less:</li>
+</ol>
+<p><span class="math display">\[E_5 =\{PFP, PPF, PPP, FPP\}\]</span></p>
+</div>
+<div class="example">
+<p><span id="exm:ex3" class="example"><strong>Example 2.3  </strong></span>Consider the experiment of tossing a red six-sided die and a black
+six-sided die. This experiment consists of 36 possible outcomes. The
+sample space is given below:</p>
+<p><span class="math display">\[\begin{matrix}
+(1,1)&amp;(1,2)&amp;(1,3)&amp;(1,4)&amp;(1,5)&amp;(1,6)\\
+(2,1)&amp;(2,2)&amp;(2,3)&amp;(2,4)&amp;(2,5)&amp;(2,6)\\
+(3,1)&amp;(3,2)&amp;(3,3)&amp;(3,4)&amp;(3,5)&amp;(3,6)\\
+(4,1)&amp;(4,2)&amp;(4,3)&amp;(4,4)&amp;(4,5)&amp;(4,6)\\
+(5,1)&amp;(5,2)&amp;(5,3)&amp;(5,4)&amp;(5,5)&amp;(5,6)\\
+(6,1)&amp;(6,2)&amp;(6,3)&amp;(6,4)&amp;(6,5)&amp;(6,6)
+\end{matrix}\]</span></p>
+<p>The first entry gives the outcome of the red die and the second entry
+gives the outcome of the black die. Thus, the outcome <span class="math inline">\((2,4)\)</span>, for
+instance, shows that the red die came up <span class="math inline">\(2\)</span> and the black die came up
+<span class="math inline">\(4\)</span>.<br />
+Give the description of the following events:</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\{(1,1),(2,1),(3,1),(4,1),(5,1),(6,1)\}\)</span></li>
+<li><span class="math inline">\(\{(1,1),(2,2),(3,3),(4,4),(5,5),(6,6)\}\)</span></li>
+<li><span class="math inline">\(\{(3,4),(4,3),(5,2),(2,5),(6,1),(1,6)\}\)</span></li>
+<li><span class="math inline">\(\{(5,6),(6,5)\}\)</span></li>
+<li><span class="math inline">\(\{(1,1)\}\)</span></li>
+</ol>
+<p><strong>Solutions</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>The black die shows 1</li>
+<li>The two die match</li>
+<li>The sum of the dice equals 7</li>
+<li>The sum of the dice equals 11</li>
+<li>Both dice show a 1</li>
+</ol>
+</div>
+<div class="example">
+<p><span id="exm:ex4" class="example"><strong>Example 2.4  </strong></span>For the dice-tossing experiment in Example <a href="#ex:ex3"><strong>??</strong></a> list the
+outcomes for the following events:</p>
+<ol style="list-style-type: lower-alpha">
+<li>The sum is even.</li>
+<li>The sum is divisible by 5.</li>
+<li>The sum is a prime number. (A prime number is a number greater than
+1 which is divisible only by 1 and itself.)</li>
+<li>The number on the black die is 2 greater than the number on the red
+die.</li>
+<li>The sum is not even.</li>
+<li>The sum is not exactly divisible by 5</li>
+</ol>
+<p><strong>Solutions</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>The following pairs have a sum that is even:</li>
+</ol>
+<p><span class="math display">\[\begin{matrix}
+(1, 1)&amp;(1, 3)&amp;(1,5)&amp;(2, 2)&amp;(2, 4)&amp;(2, 6)\\
+(3, 1)&amp;(3, 3)&amp;(3, 5)&amp;(4, 2)&amp;(4,4)&amp;(4, 6)\\
+(5, 1)&amp;(5, 3)&amp;(5, 5)&amp;(6, 2)&amp;(6,4)&amp;(6, 6)
+\end{matrix}\]</span></p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li><p>The following pairs have a sum that is divisible by 5:</p>
+<p><span class="math display">\[\{(1,4),(4, 1),(3,2),(2, 3),(5, 5),(6,4),(4, 6)\}\]</span></p></li>
+<li><p>The following pairs have a sum that is a prime number:</p></li>
+</ol>
+<p><span class="math display">\[\begin{matrix}
+(1,2)&amp;(2, 1)&amp;(1,4)&amp;(4, 1)&amp;(1,6)&amp;(6, 1)&amp;(2, 5)\\
+(5, 2)&amp;(3,4)&amp;(4, 3)&amp;(5, 6)&amp;(6, 5)&amp;(2, 3)&amp;(3,2)
+\end{matrix}\]</span></p>
+<ol start="4" style="list-style-type: lower-alpha">
+<li><p>The following pairs have a number on the black die that is 2 greater
+than the number on the red die:</p>
+<p><span class="math display">\[\{(1,3),(2,4),(3,5),(4,6)\}\]</span></p></li>
+<li><p>All outcomes in <span class="math inline">\(S\)</span> that are not listed in part (a) have a sum that
+is not even.</p></li>
+<li><p>All outcomes in <span class="math inline">\(S\)</span> that are not listed in part (b) have a sum that
+is not divisible by 5.</p></li>
+</ol>
+</div>
+</div>
+<div id="exercises" class="section level3 unnumbered hasAnchor">
+<h3>Exercises<a href="introduction-to-probability.html#exercises" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li><p>A single die is tossed. List the simple events in the sample space
+and the list the simple events in</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(A:\)</span> Observe a number that is divisible by <span class="math inline">\(3\)</span></li>
+<li><span class="math inline">\(B:\)</span> Observe a number less than <span class="math inline">\(5\)</span></li>
+<li><span class="math inline">\(C:\)</span> Observe a number greater than <span class="math inline">\(2\)</span></li>
+</ol></li>
+<li><p>A sample space contains seven simple events: <span class="math inline">\(E_1,E_2,\dots,E_7\)</span>.
+Use the following three events - <span class="math inline">\(A=\{E_3,E_4,E_6\}\)</span>,
+<span class="math inline">\(B=\{E_1,E_3,E_5,E_7\}\)</span>, and <span class="math inline">\(C=\{E_2,E_4\}\)</span> and list the simple
+events in</p>
+<ol style="list-style-type: lower-alpha">
+<li>Both <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span></li>
+<li>Not <span class="math inline">\(A\)</span></li>
+<li><span class="math inline">\(A\)</span> or <span class="math inline">\(C\)</span> or both</li>
+</ol></li>
+<li><p>For each of the following experiments, define the simple events.</p>
+<ol style="list-style-type: lower-alpha">
+<li>A coin is tossed twice and the upper face (head or tail) is recorded for each toss.</li>
+<li>Three children are randomly selected and their gender is recorded</li>
+</ol></li>
+<li><p>Let <span class="math inline">\(C\)</span> be the event that tomorrow’s weather is hot, and <span class="math inline">\(D\)</span> the
+event that it rains tomorrow. Describe (in words) the following
+compound events</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(C\)</span> or <span class="math inline">\(D\)</span></li>
+<li><span class="math inline">\(C\)</span> and <span class="math inline">\(D\)</span></li>
+</ol></li>
+<li><p>An experiment consists of asking three shoppers at random if they
+buy brand A peanut butter. Let <span class="math inline">\(Y\)</span> denote yes and <span class="math inline">\(N\)</span> denote no. Let
+<span class="math inline">\(YYN\)</span> denote the simple event that the first two polled buy brand A
+and the third does not. Further, let <span class="math inline">\(E\)</span> be the event that at least
+two people say yes and let <span class="math inline">\(F\)</span> be the event that the first person
+polled say no. List the simple events making up the following
+events:</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(E\)</span></li>
+<li><span class="math inline">\(F\)</span></li>
+<li><span class="math inline">\(E\)</span> or <span class="math inline">\(F\)</span></li>
+<li><span class="math inline">\(E\)</span> and <span class="math inline">\(F\)</span></li>
+</ol></li>
+</ol>
+</div>
+</div>
+<div id="some-relationships-between-events" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Some relationships between events<a href="introduction-to-probability.html#some-relationships-between-events" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>An event is nothing but a set. Therefore, relationships and results from
+set theory can be used to study events. The following operations will be
+used to construct new events from given events:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>The <strong>union</strong> of two events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, denoted by <span class="math inline">\(A\cup B\)</span> and
+read “A <strong>or</strong> B” is the event consisting of all outcomes that are
+either in <span class="math inline">\(A\)</span> or in <span class="math inline">\(B\)</span> or in both events. This implies that the
+union includes outcomes for which both <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> occur as well as
+outcomes for which exactly one occurs. That is, all outcomes in at
+least one of the events.</p></li>
+<li><p>The <strong>intersection</strong> of two events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, denoted by <span class="math inline">\(A\cap B\)</span>
+and read “A <strong>and</strong> B” is the event consisting of all outcomes that
+are in both <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>.</p></li>
+<li><p>The <strong>complement</strong> of an event <span class="math inline">\(A\)</span>, denoted by <span class="math inline">\(A^c\)</span>, is the set of
+all outcomes in <span class="math inline">\(S\)</span> that are not contained in <span class="math inline">\(A\)</span>.</p></li>
+</ol>
+<div class="example">
+<p><span id="exm:ex5" class="example"><strong>Example 2.5  </strong></span>Consider the experiment of rolling a balanced six-sided die.</p>
+<p>Let <span class="math inline">\(A=\{1,3,5\}\)</span>, <span class="math inline">\(B=\{2,4,6\}\)</span> and <span class="math inline">\(C=\{1,2,3\}\)</span>. Then</p>
+<p><span class="math inline">\(A\cup B=\{1,2,3,4,5,6\}=S\)</span>, <span class="math inline">\(A\cup C=\{1,2,3,5\}\)</span>, <span class="math inline">\(A\cap C=\{1,3\}\)</span>
+and <span class="math inline">\(A^c=\{2,4,6\}\)</span></p>
+</div>
+<p>Sometimes <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> have no outcomes in common, so that their
+intersection contains no outcomes.</p>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>If events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> have no outcomes in common, they are said to
+be disjoint or <strong>mutually exclusive</strong> events. This can be expressed
+mathematically as <span class="math inline">\(A\cap B=\emptyset\)</span>, where <span class="math inline">\(\emptyset\)</span> denotes the
+event consisting of no outcomes whatsoever (the “null” or “empty”
+event).</li>
+</ol>
+<div class="example">
+<p><span id="exm:ex6" class="example"><strong>Example 2.6  (Example 2.5 Continued) </strong></span>The events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are mutually exclusive because
+<span class="math inline">\(A\cap B=\emptyset\)</span>.</p>
+</div>
+<div class="example">
+<p><span id="exm:ex7" class="example"><strong>Example 2.7  </strong></span>Consider the experiment of tossing a R5 coin followed by a R1 coin. Are
+the following events mutually exclusive?</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(A=\)</span> two heads; <span class="math inline">\(B=\)</span> two tails</li>
+<li><span class="math inline">\(A=\{HT,TT\}\)</span>; <span class="math inline">\(B=\{HT,TH\}\)</span></li>
+<li><span class="math inline">\(A=\emptyset\)</span>; <span class="math inline">\(B=\{TT\}\)</span></li>
+<li><span class="math inline">\(A\)</span>; <span class="math inline">\(A^c\)</span></li>
+</ol>
+<p><strong>Solutions</strong></p>
+<ol style="list-style-type: lower-alpha">
+<li>Yes; they have no outcomes in common</li>
+<li>No; they have the event <span class="math inline">\(HT\)</span> in common</li>
+<li>Yes; they have no outcomes in common</li>
+<li>Yes; they have no outcomes in common</li>
+</ol>
+</div>
+<p>Sometimes it helps to use a picture called a <strong>Venn diagram</strong> to
+describe an experiment. A Venn diagram is a graphical representation of
+the sample spaces and the relationships between the events. A rectangle
+commonly denotes the sample space and the events are represented by
+circles drawn inside the rectangle. Figure <a href="introduction-to-probability.html#fig:fig2">2.1</a> shows
+examples of Venn diagrams</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:fig2"></span>
+<img src="Figures/Venn-diagrams.png" alt="Venn diagrams" width="374" />
+<p class="caption">
+Figure 2.1: Venn diagrams
+</p>
+</div>
+<div id="exercises-1" class="section level3 unnumbered hasAnchor">
+<h3>Exercises<a href="introduction-to-probability.html#exercises-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li>Cumesh and Fani have applied for several part-time student jobs at a
+local university. Let <span class="math inline">\(A\)</span> be the event that Cumesh is hired and let
+<span class="math inline">\(B\)</span> be the event that Fani is hired. Express in terms of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>
+the events</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li>Cumesh is hired but not Fani</li>
+<li>At least one of the is hired</li>
+<li>Excactly one of them is hired</li>
+</ol>
+<!-- -->
+<ol start="2" style="list-style-type: decimal">
+<li>An academic department has just completed voting by secret ballot
+for a department head. The ballot box contains four slips with votes
+for candidate <span class="math inline">\(B\)</span>. Suppose these slips are removed from the box one
+by one.</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li>List all the possible outcomes</li>
+<li>Suppose a running tally is kept as slips are removed. For what
+outcomes does <span class="math inline">\(A\)</span> remain ahead of <span class="math inline">\(B\)</span> throughout the tally.</li>
+</ol>
+<!-- -->
+<ol start="3" style="list-style-type: decimal">
+<li>Which of the following pairs of events are mutually exclusive?</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(E=\)</span> Mrs. Botha gives birth to twins. <span class="math inline">\(F=\)</span> A mother gives birth to a
+girl</li>
+<li><span class="math inline">\(E=\)</span> Lebogang fails the last Statistics test <span class="math inline">\(F=\)</span> Lebogang passes
+the course</li>
+<li><span class="math inline">\(E=\)</span> Kwanele goes to the movies <span class="math inline">\(F=\)</span> Kwanele eats pop-corn</li>
+</ol>
+<!-- -->
+<ol start="4" style="list-style-type: decimal">
+<li>A student is currently working on three assignments for three
+different subjects. Let <span class="math inline">\(A_i\)</span> denote the event that the <span class="math inline">\(i^{th}\)</span>
+assignment is completed by the due date. Use the operations of
+union, intersection, and complement to describe each of the
+following events in terms of <span class="math inline">\(A_1\)</span>, <span class="math inline">\(A_2\)</span>, and <span class="math inline">\(A_3\)</span>, draw a Venn
+diagram, and shade the region corresponding to each one.</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li>At least one assignment is completed by the due date.</li>
+<li>All the assignments are completed by the due date.</li>
+<li>Only the first assignment is completed by the due date.</li>
+<li>Exactly one assignment is completed by the due date.</li>
+</ol>
+</div>
+</div>
+<div id="assigning-probabilities" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Assigning Probabilities<a href="introduction-to-probability.html#assigning-probabilities" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="what-is-a-probability" class="section level3 hasAnchor" number="2.3.1">
+<h3><span class="header-section-number">2.3.1</span> What is a probability?<a href="introduction-to-probability.html#what-is-a-probability" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>To every event <span class="math inline">\(E\)</span> in the sample space <span class="math inline">\(S\)</span>, we assign a number <span class="math inline">\(P(E)\)</span>
+called the probability of <span class="math inline">\(E\)</span>. The probability of an event is a number
+between <span class="math inline">\(0\)</span> and <span class="math inline">\(1\)</span>. It is the likelihood that the event <span class="math inline">\(E\)</span> will occur.
+The closer <span class="math inline">\(P(E)\)</span> is to <span class="math inline">\(1\)</span>, the more likely the event <span class="math inline">\(E\)</span> is to occur.
+The closer <span class="math inline">\(P(E)\)</span> is to <span class="math inline">\(0\)</span>, the more unlikely the event <span class="math inline">\(E\)</span> is to
+occur. Probability satisfies the following properties:</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(0&lt;P(E)&lt;1\)</span></li>
+<li><span class="math inline">\(P(S)=1\)</span></li>
+<li>If <span class="math inline">\(E_1,E_2,E_3,\dots\)</span> form sequences of pairwise mutually exclusive
+events of <span class="math inline">\(S\)</span>, that is <span class="math inline">\(E_i\cap E_j=\emptyset\)</span>, for <span class="math inline">\(i\neq j\)</span>, then
+<span class="math inline">\(P(E_1\cup E_2\cup E_3\cup\dots)=\sum_{i}P(E_i)\)</span></li>
+</ol>
+<p>where <span class="math inline">\(\sum_{i}P(E_i)\)</span> is the sum of the probabilities of all the
+outcomes in a sample space. Consider a compound event <span class="math inline">\(A\)</span>. The
+probability of <span class="math inline">\(A\)</span> is defined to be the sum of the probabilities of the
+outcomes contained in <span class="math inline">\(A\)</span>.</p>
+<div class="example">
+<p><span id="exm:ex8" class="example"><strong>Example 2.8  </strong></span>Suppose a six-sided die is tossed once and the probability of any side
+landing face up is <span class="math inline">\(\frac{1}{6}\)</span>. If <span class="math inline">\(E\)</span> is the event of getting an even
+number and <span class="math inline">\(F\)</span> is the event of getting an odd number, find</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(P(E)\)</span></li>
+<li><span class="math inline">\(P(F)\)</span></li>
+<li><span class="math inline">\(P(E~\text{or}~F)\)</span></li>
+<li><span class="math inline">\(P(E~\text{and}~F)\)</span></li>
+</ol>
+<p><strong><em>Solutions</em></strong></p>
+<p>The sample space is <span class="math inline">\(S=\{1,2,3,4,5\}\)</span>, the event <span class="math inline">\(E\)</span> is <span class="math inline">\(\{2,4,6\}\)</span>, and
+the event <span class="math inline">\(F\)</span> is <span class="math inline">\(\{1,3,5\}\)</span>. We thus have:</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(P(E)=P(2)+P(4)+P(6)=\frac{1}6+\frac{1}{6}+\frac{1}{6}\)</span></li>
+<li><span class="math inline">\(P(E)=P(1)+P(3)+P(5)=\frac{1}6+\frac{1}{6}+\frac{1}{6}\)</span></li>
+<li><span class="math inline">\(P(E~or~F)=P(E\cup F)=P(S)=1\)</span></li>
+<li><span class="math inline">\(P(E~and~F)=P(E\cap F)=0\)</span>, because <span class="math inline">\(E\cap F=\emptyset\)</span>.</li>
+</ol>
+</div>
+<p>We next turn to the main question of this section which is on how to
+assign probabilities to events. There are two general methods for
+assigning probabilities to events: the objective method and the
+subjective method. The <strong>objective method</strong> involves assigning
+probabilities to events based on counting or repeated experiments. On
+the other hand, the objective method involves assigning probabilities to
+events based on intuition or personal belief. We now discuss each method
+in turn.</p>
+</div>
+<div id="objective-method" class="section level3 hasAnchor" number="2.3.2">
+<h3><span class="header-section-number">2.3.2</span> Objective method<a href="introduction-to-probability.html#objective-method" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Consider an experiment that can be repeatedly performed in an identical
+and independent fashion and let <span class="math inline">\(A\)</span> be an event consisting of a fixed
+set of outcomes of the experiment. Simple examples of repeatable
+experiments include tossing a coin and rolling a die. If the experiment
+is performed <span class="math inline">\(n\)</span> times, on some of the replications the event <span class="math inline">\(A\)</span> will
+occur and on some <span class="math inline">\(A\)</span> will not occur. Let <span class="math inline">\(n(A)\)</span> denote the number of
+replications on which <span class="math inline">\(A\)</span> does occur. Then the ratio <span class="math inline">\(n(A)/n\)</span> is called
+the <strong>relative frequency</strong> of occurrence of the event <span class="math inline">\(A\)</span> in the <span class="math inline">\(n\)</span>
+replications. The empirical evidence based on the results of many of the
+sequences of repeatable experiments indicate that as <span class="math inline">\(n\)</span> becomes large,
+the relative frequency stabilizes. That is, as <span class="math inline">\(n\)</span> gets large, the
+relative frequency approaches a limiting value referred to as the
+limiting relative frequency of the event <span class="math inline">\(A\)</span>. The objective method of
+assigning probability identifies this limiting relative frequency with
+<span class="math inline">\(P(A)\)</span>. Thus, if an experiment is repeatable, we can assign
+probabilities to the outcomes in accordance with their limiting relative
+frequencies. As an example, The table below contains the number of heads
+obtained when a fair coin was tossed <span class="math inline">\(n\)</span> times, as well as the relative
+frequency <span class="math inline">\(n(H)/n\)</span> for the number of heads obtained in each case. It is
+clear from the table that the limiting value of the relative frequency
+of obtaining a head when a coin is tossed <span class="math inline">\(n\)</span> times will approach <span class="math inline">\(0.5\)</span>
+as <span class="math inline">\(n\)</span> becomes large. Therefore, the probability of <span class="math inline">\(H\)</span>, obtaining a
+head, is <span class="math inline">\(0.5\)</span>.</p>
+<p><img src="Figures/Relative_Frequency_Example.png" width="298" /></p>
+<p>The only problem with this approach is that the limiting relative
+frequencies of events are not always known. In order to use this method,
+we need to have repetitive data available and then use it to approximate
+the relative frequency limits. Probabilities obtained using this
+approach are said to be <strong>empirical</strong>. According to the empirical
+approach to probability, if <span class="math inline">\(A\)</span> is an event, <span class="math inline">\(P(A)\)</span> is approximately
+equal to <span class="math inline">\(f/n\)</span>, where <span class="math inline">\(f\)</span> is the number of favorable outcomes and <span class="math inline">\(n\)</span> is
+the number of repetitions of the experiment. Thus, <span class="math inline">\(P(A)\approx f/n\)</span>.
+For example, consider again the coin-tossing experiment in Table. The
+relative frequency can serve as an estimate of the probability <span class="math inline">\(P(H)\)</span>.
+To get a better estimate, we could consider tossing the coin <span class="math inline">\(3000\)</span> or
+<span class="math inline">\(5000\)</span> times or even more.</p>
+<div class="example">
+<p><span id="exm:ex9" class="example"><strong>Example 2.9  </strong></span>The NBT math scores for 18790 students at a large university are given
+in the following grouped frequency table:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:fig3"></span>
+<img src="Figures/Relative_Frequency_NBT.png" alt="Tree diagram for the experiment of tossing two coins" width="168" />
+<p class="caption">
+Figure 2.2: Tree diagram for the experiment of tossing two coins
+</p>
+</div>
+<p>If a student is selected at random, what is the probability that the
+student’s NBT math score</p>
+<ol style="list-style-type: lower-alpha">
+<li>exceeds 39</li>
+<li>is at most 59</li>
+<li>is between 60 - 79</li>
+</ol>
+<p><strong>Solutions</strong> We first calculate the relative frequencies for each class
+by dividing the frequency <span class="math inline">\(f\)</span> of the class by the total number of
+students <span class="math inline">\(n=18790\)</span>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:fig4"></span>
+<img src="Figures/Relative_Frequency_NBT2.png" alt="Tree diagram for the experiment of tossing two coins" width="188" />
+<p class="caption">
+Figure 2.3: Tree diagram for the experiment of tossing two coins
+</p>
+</div>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(P(NBT&gt;39)=0.343+0.157+0.043+0.014=0.557\)</span></li>
+<li><span class="math inline">\(P(N\leq 59)=0.103+0.340+0.343+0.157=0.943\)</span></li>
+<li><span class="math inline">\(P(60&lt;NBT&lt;79)=0.043\)</span></li>
+</ol>
+</div>
+</div>
+<div id="classical-probability" class="section level3 hasAnchor" number="2.3.3">
+<h3><span class="header-section-number">2.3.3</span> Classical probability<a href="introduction-to-probability.html#classical-probability" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>If an experiment has a finite number, <span class="math inline">\(n\)</span>, of outcomes that we believe
+are equally likely to occur, we can assign each outcome in the sample
+space <span class="math inline">\(S\)</span> a probability value of <span class="math inline">\(1/n\)</span>. This is a consequence of the
+second property of a probability, which states that the sum of the
+probabilities for a sample space must be <span class="math inline">\(1\)</span>. Then if <span class="math inline">\(E\)</span> is an event
+containing <span class="math inline">\(n(E)\)</span> outcomes, the probability of <span class="math inline">\(E\)</span> occurring is simply
+<span class="math inline">\(n(E)/n\)</span>. Thus, we have the following basic fact:</p>
+<p>*If <span class="math inline">\(S\)</span> is a sample space of <strong>equally likely outcomes</strong>, then
+<span class="math inline">\(P(E)=n(E)/n\)</span>,</p>
+<p>where <span class="math inline">\(n(E)\)</span> is the number of outcomes in <span class="math inline">\(E\)</span> and <span class="math inline">\(n\)</span> is the number of
+outcomes in <span class="math inline">\(S\)</span>.</p>
+<p>The objective method for assigning probabilities using sample spaces of
+equally likely outcomes is referred to as the <strong>classical probability
+method</strong>.</p>
+<div class="example">
+<p><span id="exm:ex10" class="example"><strong>Example 2.10  </strong></span>Consider the dice-tossing experiment described in Example 2.3. Find the
+probability that</p>
+<ol style="list-style-type: lower-alpha">
+<li>Both dice show an even number.</li>
+<li>The dice show a sum of <span class="math inline">\(7\)</span></li>
+<li>The dice show a sum of <span class="math inline">\(7\)</span> or <span class="math inline">\(11\)</span></li>
+<li>Both dice show a prime number</li>
+<li>The dice show a sum of <span class="math inline">\(13\)</span></li>
+</ol>
+<p><strong>Solutions</strong></p>
+<p>Recall that the sample space is <span class="math display">\[\begin{matrix}
+(1,1)&amp;(1,2)&amp;(1,3)&amp;(1,4)&amp;(1,5)&amp;(1,6)\\
+(2,1)&amp;(2,2)&amp;(2,3)&amp;(2,4)&amp;(2,5)&amp;(2,6)\\
+(3,1)&amp;(3,2)&amp;(3,3)&amp;(3,4)&amp;(3,5)&amp;(3,6)\\
+(4,1)&amp;(4,2)&amp;(4,3)&amp;(4,4)&amp;(4,5)&amp;(4,6)\\
+(5,1)&amp;(5,2)&amp;(5,3)&amp;(5,4)&amp;(5,5)&amp;(5,6)\\
+(6,1)&amp;(6,2)&amp;(6,3)&amp;(6,4)&amp;(6,5)&amp;(6,6)
+\end{matrix}\]</span> Therefore, there are <span class="math inline">\(n=36\)</span> equally likely outcomes.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Let <span class="math inline">\(E_1\)</span> be the event that both dice show an even number. There are
+<span class="math inline">\(n(E_1)=9\)</span> outcomes in which both numbers are even. Therefore,
+<span class="math inline">\(P(E_1)=n(E_1)/n=9/36=1/12\)</span>.</li>
+<li>Let <span class="math inline">\(E_2\)</span> be the event that the dice show a sum of <span class="math inline">\(7\)</span>.
+<span class="math inline">\(E_2=\{(3,4);(4,3);(5,2);(2,5);(6,1);(1,6)\}\)</span>. Therefore,
+<span class="math inline">\(P(E_2)=n(E_2)/n=6/36=1/6\)</span></li>
+<li>Let <span class="math inline">\(E_3\)</span> be the event that the dice show a sum of <span class="math inline">\(7\)</span> or <span class="math inline">\(11\)</span>.
+<span class="math inline">\(E_3=\{(3,4);(4,3);(5,2);(2,5);(6,1);(1,6);(5,6);(6,5)\}\)</span>.
+Therefore, <span class="math inline">\(P(E_3)=n(E_3)/n=8/36=2/9\)</span>.</li>
+<li>Let <span class="math inline">\(E_4\)</span> be the event that both dice show a prime number. Since
+<span class="math inline">\(E_4=\{(2,2);(2,3);(2,5);(3,2);(3,5);(5,2);(5,3);(5,5)\}\)</span>, we have
+<span class="math inline">\(P(E_4)=n(E_4)/n=8/36=2/9\)</span>.</li>
+<li>Let <span class="math inline">\(E_5\)</span> be the event that the two dice show a sum of <span class="math inline">\(13\)</span>. Since a
+sum of <span class="math inline">\(13\)</span> is impossible, <span class="math inline">\(E_6=\emptyset\)</span>. Thus, <span class="math inline">\(P(E_6)=0\)</span>.</li>
+</ol>
+</div>
+</div>
+<div id="subjective-method" class="section level3 hasAnchor" number="2.3.4">
+<h3><span class="header-section-number">2.3.4</span> Subjective method<a href="introduction-to-probability.html#subjective-method" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The objective method of assigning probabilities is limited to
+experimental situations that are repeatable. However, many real-world
+experimental situations are unrepeatable. For instance, the chances of a
+peace agreement in the Russia-Ukraine war. Thus, we have limited or no
+information concerning the outcomes of an experiment. We must therefore
+adopt an alternative interpretation of a probability. In such
+situations, probabilities are assigned based on experience or expert
+knowledge. For instance, a doctor treating a patient with a rare disease
+must make a prognosis based on his experience with the patient and the
+patient’s overall medical record. When probabilities are assigned to
+events based on intuition and personal beliefs, the assignment method is
+called <strong>subjective</strong>. Because different people may have different prior
+information and opinions concerning a given experimental situation,
+probability assignment will differ from individual to individual.</p>
+</div>
+<div id="exercises-2" class="section level3 unnumbered hasAnchor">
+<h3>Exercises<a href="introduction-to-probability.html#exercises-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li>Match each of the following probabilities with one of the statements
+that follow:</li>
+</ol>
+<p><span class="math display">\[ 0\quad 0.01\quad 0.3\quad 0.99\quad 1\]</span></p>
+<ol style="list-style-type: lower-alpha">
+<li>The event is very unlikely, but it will occur once in a while in a
+long sequence of trials.</li>
+<li>The event will occur more often than not.</li>
+<li>The event is certain.</li>
+<li>The event is impossible. It can never happen.</li>
+</ol>
+<!-- -->
+<ol start="2" style="list-style-type: decimal">
+<li>Which of the following numbers cannot be the probability of some
+event?</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(0.74\)</span></li>
+<li><span class="math inline">\(-1\)</span></li>
+<li><span class="math inline">\(1.02\)</span></li>
+<li><span class="math inline">\(0.67\)</span></li>
+</ol>
+<!-- -->
+<ol start="3" style="list-style-type: decimal">
+<li>A 2024 survey showed that of the top 10 electric vehicles based on
+cost, 2 are BYDs, 2 are Toyotas, 3 are Renaults and 3 are Volvos.
+Choose one at random. What is the probability that the chosen EV is</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li>Asian?</li>
+<li>European?</li>
+<li>Asian or European?</li>
+</ol>
+<!-- -->
+<ol start="4" style="list-style-type: decimal">
+<li>A bag contains three red pens, two blue pens and five black pens.
+One pen is selected at random. What is the probability that the pen
+is</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li>red?</li>
+<li>blue?</li>
+<li>black?</li>
+</ol>
+<!-- -->
+<ol start="5" style="list-style-type: decimal">
+<li>Suppose that two dice are rolled one time, what is the probability
+of getting</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li>a sum of 6?</li>
+<li>doubles?</li>
+<li>a sum of 7 or 11?</li>
+<li>a sum greater than 9?</li>
+</ol>
+<!-- -->
+<ol start="6" style="list-style-type: decimal">
+<li>In a study concerning the distribution of the ages of female CEOs in
+South Africa, 1 CEO was found to be aged between 21 - 30, 8 CEOs
+were between 31 - 40, 27 CEOs were between 41 - 50, 29 CEOs were
+between 51 - 60, 24 CEO were between 61 - 70 and 11 CEOs were 71
+years or older. Suppose that a CEO is selected at random , what is
+the probability that her age is</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li>between 31 and 40?</li>
+<li>under 31?</li>
+<li>over 30 and under 51?</li>
+<li>under 31 or over 60?</li>
+</ol>
+<!-- -->
+<ol start="7" style="list-style-type: decimal">
+<li>Toss three coins 128 times and record the number of heads (0, 1, 2,
+or 3); then record your results with the theoretical probabilities.
+Compute the empirical probabilities of each.</li>
+</ol>
+</div>
+</div>
+<div id="mathematical-properties-of-probability" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Mathematical properties of probability<a href="introduction-to-probability.html#mathematical-properties-of-probability" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We now mention some other important and useful mathematical properties
+of probabilities.</p>
+<div id="probability-of-a-complement" class="section level3 hasAnchor" number="2.4.1">
+<h3><span class="header-section-number">2.4.1</span> Probability of a complement<a href="introduction-to-probability.html#probability-of-a-complement" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>If events <span class="math inline">\(A\)</span> and <span class="math inline">\(A^c\)</span> are complementary events in the sample space
+<span class="math inline">\(S\)</span>, then <span class="math inline">\(P(A^c)+P(A)=1\)</span>. Solving for <span class="math inline">\(P(A^c)\)</span>, we obtain
+<span class="math inline">\(P(A^c)=1-P(A)\)</span>. As an example, suppose that the probability that Loyiso
+will finish his assignment before the deadline is <span class="math inline">\(\frac{3}{7}\)</span>. What is
+the probability that he will not finish his assignment? Let <span class="math inline">\(A\)</span> be the
+event that Loyiso will finish his assignment. Then, <span class="math inline">\(A^c\)</span> is the event
+that he will not finish his assignment. Since <span class="math inline">\(P(A)=\frac{3}{7}\)</span>, we
+have <span class="math inline">\(P(A^c)=1-P(A)=1-\frac{3}{7}\)</span>.</p>
+</div>
+<div id="addition-rule" class="section level3 hasAnchor" number="2.4.2">
+<h3><span class="header-section-number">2.4.2</span> Addition rule<a href="introduction-to-probability.html#addition-rule" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>For any events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, <span class="math inline">\(P(A\cup B)=P(A)+P(B)-P(A\cap B)\)</span>. This is
+known as the <strong>addition rule</strong>. This rule is useful when we are
+interested in knowing the probability that at least one of two events
+occurs. That is, with events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, we are interested in knowing
+the probability that event <span class="math inline">\(A\)</span> or event <span class="math inline">\(B\)</span> or both will occur.</p>
+<div class="example">
+<p><span id="exm:ex11" class="example"><strong>Example 2.11  </strong></span>In a certain residential suburb, <span class="math inline">\(60\%\)</span> of all households get internet
+service from the local cable company, <span class="math inline">\(80\%\)</span> get television service from
+that company, and <span class="math inline">\(50\%\)</span> get both services from the company. If a
+household is randomly selected, what is the probability that it gets at
+least one of these services from the company?</p>
+<p><strong>Solution:</strong> Let <span class="math inline">\(A=\)</span> the event that a household gets internet service
+from the cable company and <span class="math inline">\(B=\)</span> the event that household gets television
+service from the cable company. The given information implies that
+<span class="math inline">\(P(A)=0.6\)</span>, <span class="math inline">\(P(B)=0.8\)</span> and <span class="math inline">\(P(A\cap B)=0.5\)</span>.
+<span class="math inline">\(P(\text{at least one of the services from the company})=P(A)+P(B)-P(A\cap B)=0.6+0.8-0.5=0.9\)</span>.</p>
+</div>
+</div>
+<div id="exercises-3" class="section level3 unnumbered hasAnchor">
+<h3>Exercises<a href="introduction-to-probability.html#exercises-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li>Consider randomly selecting a student at a certain university, and
+let <span class="math inline">\(A\)</span> denote the event that the selected student uses ChatGPT and
+<span class="math inline">\(B\)</span> be the event that the student uses deepseek. Suppose that
+<span class="math inline">\(P(A)=0.5\)</span>, <span class="math inline">\(P(B)=0.4\)</span> and <span class="math inline">\(P(A\cap B)=0.25\)</span>.</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li>Calculate the probability that the selected student uses at least
+one of the two chatbots (i.e. the probability of the event
+<span class="math inline">\(P(A\cap B)\)</span>).</li>
+<li>What is the probability that the selected student uses neither of
+the two chatbots?</li>
+<li>Describe, in terms of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, the event that the selected
+student uses ChatGPT but not deepseek and then calculate the
+probability of this event.</li>
+</ol>
+<!-- -->
+<ol start="2" style="list-style-type: decimal">
+<li>A particular University has elected both the president and deputy
+president of the student representative council. Let <span class="math inline">\(A\)</span> be the
+event that a randomly selected voter favors the presidential
+candidate and <span class="math inline">\(B\)</span> be the event that the voter favors the deputy
+presidential candidate. Suppose that <span class="math inline">\(P(A^c)=0.44\)</span>, <span class="math inline">\(P(B^c)=0.57\)</span>
+and <span class="math inline">\(P(A\cup B)=0.68\)</span>.</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li>What is the probability that a randomly selected voter is in favor
+of both candidates?</li>
+<li>What is the probability that a randomly selected voter is in favor
+of exactly one of these<br />
+candidates?</li>
+<li>What is the probability that a randomly selected voter is not in
+favor of at least one of these candidates?</li>
+</ol>
+<!-- -->
+<ol start="3" style="list-style-type: decimal">
+<li>A student has three options on what to do for leisure. Let
+<span class="math inline">\(A_i=\{\text{do activity } i\}\)</span>, for <span class="math inline">\(i=1,2,3\)</span>, and suppose that
+<span class="math inline">\(P(A_1)=0.22\)</span>, <span class="math inline">\(P(A_2)=0.25\)</span>, <span class="math inline">\(P(A_3)=0.28\)</span>, <span class="math inline">\(P(A_1\cap A_2)=0.11\)</span>,
+<span class="math inline">\(P(A_1\cap A_3)=0.05\)</span>, <span class="math inline">\(P(A_2\cap A_3)=0.07\)</span>. Express in words each
+of the following events and compute the probability of each event::</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(A_1\cup A_2\)</span></li>
+<li><span class="math inline">\(A_1^c\cap A_2^c\)</span> [Hint: <span class="math inline">\((A_1\cup A_2)^c=A_1^c\cap A_2^c\)</span>]</li>
+</ol>
+<!-- -->
+<ol start="4" style="list-style-type: decimal">
+<li>Let <span class="math inline">\(A\)</span> be the event that the next customer that walks into a store
+will buy Coke and let <span class="math inline">\(B\)</span> be the event that the next customer that
+walks into a store will buy Pepsi. Suppose that <span class="math inline">\(P(A)=0.3\)</span> and
+<span class="math inline">\(P(B)=0.5\)</span>.</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li>Why is it not the case that <span class="math inline">\(P(A)+P(B)=1\)</span>?</li>
+<li>Calculate <span class="math inline">\(P(A^c)\)</span>.</li>
+<li>Calculate <span class="math inline">\(P(A\cup B)\)</span>.</li>
+<li>Calculate <span class="math inline">\(P(A^c\cap B^c)\)</span>. [Hint: Use the hint in the previous
+question]</li>
+</ol>
+</div>
+</div>
+<div id="basic-counting-rules" class="section level2 hasAnchor" number="2.5">
+<h2><span class="header-section-number">2.5</span> Basic counting rules<a href="introduction-to-probability.html#basic-counting-rules" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Whenever the outcomes of an experiment are equally likely (that is, the
+same probability is assigned to each simple event in the sample space),
+a necessary step towards assigning probabilities is being able to count.
+Suppose that an experiment has <span class="math inline">\(n\)</span> possible outcomes and <span class="math inline">\(n(A)\)</span> is the
+number of experimental outcomes contained in event <span class="math inline">\(A\)</span>, then
+<span class="math inline">\(P(A)=n(A)/n\)</span>. If all the experimental outcomes are available or can be
+listed, then <span class="math inline">\(n(A)\)</span> and <span class="math inline">\(n\)</span> can be obtained without the use of counting
+rules. However, many experiments involve constructing lists of outcomes
+in which <span class="math inline">\(n\)</span> and <span class="math inline">\(n(A)\)</span> are prohibitively large. Fortunately, for such
+experiments, we can use some basic counting rules to calculate
+probabilities without listing the experimental outcomes.</p>
+<div id="the-fundamental-counting-rule" class="section level3 hasAnchor" number="2.5.1">
+<h3><span class="header-section-number">2.5.1</span> The Fundamental counting rule<a href="introduction-to-probability.html#the-fundamental-counting-rule" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The first counting rule we discuss is referred to the <strong>fundamental
+counting rule</strong> and it applies to experiments with multiple steps.
+Consider an experiment in which five coins are tossed. Let the
+experimental outcomes be defined in terms of the patterns of heads and
+tails appearing on the upward faces of each of the five coins. What is
+the total number of experimental outcomes? Let <span class="math inline">\(H\)</span> and <span class="math inline">\(T\)</span> denote a head
+and a tail, respectively, <span class="math inline">\((H,H,H,H,H)\)</span> indicates the experimental
+outcome with a head on the first coin, second coin, third coin, fourth
+coin and fifth coin. As can be seen, it is a cumbersome task to list all
+of the experimental outcomes in the sample space <span class="math inline">\(S\)</span>. To help us
+calculate the total number of experimental outcomes without listing
+them, the experiment of tossing the five coins can be thought of as a
+five-step experiment: In the first step, the first coin is tossed; in
+the second step, the second coin is tossed; in the third step, the third
+coin is tossed; in the fourth step, the fourth coin is tossed and in the
+fifth step, the fifth coin is tossed. We can make use of the fundamental
+counting rule to determine the number of experimental outcomes.</p>
+<div class="theorem">
+<p><span id="thm:label" class="theorem"><strong>Theorem 2.1  (Fundamental Counting Rule) </strong></span>If an experiment can be described as a sequence of <span class="math inline">\(k\)</span> steps with <span class="math inline">\(n_1\)</span> possible outcomes on the first step, <span class="math inline">\(n_2\)</span> possible outcomes on the second step, and so on, then the total number of exeprimental outcomes is given by <span class="math inline">\(n_1\times n_2 \times \dots \times n_k\)</span>.</p>
+</div>
+<p>Looking at the experiment of tossing five coins as a sequence of first
+tossing one coin (<span class="math inline">\(n_1=2\)</span>), followed by the second coin (<span class="math inline">\(n_2=2\)</span>),
+followed by the third coin (<span class="math inline">\(n_3=2\)</span>), followed by the fourth coin
+(<span class="math inline">\(n_4=2\)</span>) and then the last coin (<span class="math inline">\(n_5=2\)</span>), we can see from the
+fundamental counting rule that there are
+<span class="math inline">\(2\times 2\times 2\times 2\times 2=32\)</span> experimental outcomes.</p>
+<div class="example">
+<p><span id="exm:ex12" class="example"><strong>Example 2.12  </strong></span>Consider the experiment of going to a store to buy a new phone. Once
+there, you find you can select from 4 models each with 5 different
+battery options and a choice of 15 exterior colors. How many possible
+choices are there for you to make?</p>
+<p><strong>Solution:</strong> The experiment has three steps: The first step (Step 1)
+involves choosing one of the <span class="math inline">\(n_1=4\)</span> models, the second step (Step 2)
+involves choosing one of the <span class="math inline">\(n_2=5\)</span> battery options and the third step
+(Step 3) involves choosing one of the <span class="math inline">\(n_3=15\)</span> exterior colors.
+Therefore, by the fundamental counting rule, there are
+<span class="math inline">\(n_1\times n_2\times n_3=4\times 5\times 15=300\)</span> possible choices.</p>
+</div>
+</div>
+<div id="tree-diagrams" class="section level3 hasAnchor" number="2.5.2">
+<h3><span class="header-section-number">2.5.2</span> Tree Diagrams<a href="introduction-to-probability.html#tree-diagrams" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In many counting and probability problems, a visual representation of
+all the outcomes of a multiple-step experiment can be constructed using
+a <em>tree diagram</em>. Suppose that, in the above coin-tossing experiment, we
+only tossed two coins. Figure <a href="introduction-to-probability.html#fig:fig5">2.4</a> displays a tree diagram
+for the experiment of tossing two coins. The sequence of steps moves
+from the left to right. The first step (Step 1) involves tossing the
+first coin and the second step (Step 2) involves tossing the second
+coin. For each step, there are two possible outcomes: head (<span class="math inline">\(H\)</span>) or tail
+(<span class="math inline">\(T\)</span>). Note that each possible outcome in the first step is associated
+with two branches in the second step. The points (e.g. <span class="math inline">\((H,H)\)</span>) on the
+right side of the tree corresponds to the experimental outcomes. Each
+path from the leftmost node of the tree to the rightmost node of the
+tree results in a single experimental outcome.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:fig5"></span>
+<img src="Figures/Tree-diagram.png" alt="Tree diagram for the experiment of tossing two coins" width="239" />
+<p class="caption">
+Figure 2.4: Tree diagram for the experiment of tossing two coins
+</p>
+</div>
+</div>
+<div id="combinations" class="section level3 hasAnchor" number="2.5.3">
+<h3><span class="header-section-number">2.5.3</span> Combinations<a href="introduction-to-probability.html#combinations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The second counting rule is useful when an experiment involves selecting
+a subset of <span class="math inline">\(k\)</span> elements from a set of <span class="math inline">\(n\)</span> distinct elements. The
+resulting sequence of <span class="math inline">\(k\)</span> elements is called a <strong>combination</strong>. The
+number of combinations of size <span class="math inline">\(k\)</span> from <span class="math inline">\(n\)</span> distinct elements, denoted
+by <span class="math inline">\(C^n_k\)</span>, can be calculated as follows <span class="math display">\[\begin{eqnarray}
+C^n_k&amp;=&amp;\binom{n}k\\
+&amp;=&amp;\frac{n!}{k!(n-k)!}
+\end{eqnarray}\]</span> <strong>Factorial notation</strong>: For any positive integer <span class="math inline">\(n\)</span>,
+<span class="math inline">\(n!\)</span> is read “<span class="math inline">\(n\)</span> factorial” and is defined by
+<span class="math inline">\(n!=n\times(n-1)\times(n-2)\times\dots\times1\)</span> and <span class="math inline">\(0!=1\)</span>, by
+definition. For instance, <span class="math inline">\(4!=4\times3\times2\times1=24\)</span>.</p>
+<div class="example">
+<p><span id="exm:ex13" class="example"><strong>Example 2.13  </strong></span>Suppose you have five books but you only have space for two books on
+your bookshelf. In how many ways can you <strong>select</strong> two books from the
+five books?</p>
+<p><strong>Solution:</strong> Given that <span class="math inline">\(n=5\)</span> and <span class="math inline">\(k=2\)</span>, there are
+<span class="math inline">\(C^5_2=\binom{5}2=10\)</span> possible choices.</p>
+</div>
+</div>
+<div id="permutations" class="section level3 hasAnchor" number="2.5.4">
+<h3><span class="header-section-number">2.5.4</span> Permutations<a href="introduction-to-probability.html#permutations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The third counting rule is useful when an experiment involves selecting
+a subset of <span class="math inline">\(k\)</span> elements from a fixed set of <span class="math inline">\(n\)</span> distinct elements in
+such a way that the order of selection is important. Thus, the same <span class="math inline">\(k\)</span>
+elements selected in a different order are considered a different
+experimental outcome. The resulting ordered sequence of <span class="math inline">\(k\)</span> elements is
+called a <strong>permutation</strong>. The number of permutations of size <span class="math inline">\(k\)</span> from
+<span class="math inline">\(n\)</span> distinct elements, denoted by <span class="math inline">\(P^n_k\)</span>, can be calculated using the
+fundamental counting rule. The first element can be chosen in <span class="math inline">\(n\)</span> ways,
+the second in <span class="math inline">\((n-1)\)</span> ways and the <span class="math inline">\(k^{th}\)</span> element in <span class="math inline">\((n-(r-1))\)</span> ways.
+Thus,</p>
+<p><span class="math inline">\(P^n_k=n(n-1)(n-2)\times\dots\times(n-k+2)(n-k+1)\)</span></p>
+<p>Using the factorial notation,
+<span class="math inline">\(P^n_k=\frac{n(n-1)\times\dots\times(n-k+1)(n-k)(n-k-1)\times\dots\times(2)(1)}{(n-k)(n-k-1)\times\dots\times(2)(1)}\)</span></p>
+<p>which becomes, <span class="math inline">\(P^n_k=\frac{n!}{(n-k)!}\)</span></p>
+<div class="example">
+<p><span id="exm:ex14" class="example"><strong>Example 2.14  </strong></span>Suppose you have three books but you only have space for two books on
+your bookshelf. In how many ways can you <strong>select</strong> and <strong>arrange</strong> the
+two books.</p>
+<p><strong>Solution:</strong> Given that <span class="math inline">\(n=5\)</span> and <span class="math inline">\(k=2\)</span>, there are
+<span class="math inline">\(P^5_2=\frac{5!}{(5-2)!}=20\)</span> possible ways to select and arrange the two
+books.</p>
+</div>
+<p>A special case of the permutation counting rule is when <span class="math inline">\(n=k\)</span>. Then,
+<span class="math inline">\(P^n_n=n!\)</span> gives the number of ways to arrange a set of <span class="math inline">\(n\)</span> distinct
+elements.</p>
+<div class="example">
+<p><span id="exm:ex15" class="example"><strong>Example 2.15  </strong></span>How many ways can <span class="math inline">\(5\)</span> books be arranged on a bookshelf?</p>
+<p><strong>Solution:</strong></p>
+<p>This is similar to selecting <span class="math inline">\(k=5\)</span> books from <span class="math inline">\(n=5\)</span> and then arranging
+them on a bookshelf. Thus, there are <span class="math inline">\(P^5_5=5!=120\)</span> ways of arranging
+the 5 books on a bookshelf.</p>
+</div>
+</div>
+<div id="exercises-4" class="section level3 unnumbered hasAnchor">
+<h3>Exercises<a href="introduction-to-probability.html#exercises-4" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li><p>If you are taking a true/false test with 10 questions, in how many
+different ways can you fill in your answer sheet if you are guessing
+the answer of each question?</p></li>
+<li><p>How many different houses can be built if a builder offers a choice
+of five basic plans, three roof styles and two exterior finishes?</p></li>
+<li><p>In how many ways can seven of ten monkeys be arranged in a row for a
+biology experiment?</p></li>
+<li><p>The student representative council has five candidates for president
+and two candidates for deputy president. Use a tree diagram to
+determine the number of ways the two offices can be filled.</p></li>
+<li><p>Three balls are selected from a box containing 10 balls. The order
+of selection is not important. How many simple events are in the
+sample space?</p></li>
+<li><p>The same car model can be purchased from five different dealerships.
+In how many ways can three dealerships be chosen from the five?</p></li>
+<li><p>A smartphone is composed of five critical parts that can be
+assembled in any order. A test is to be conducted to determine the
+time necessary for each order of assembly. If each order is to be
+tested once, how many tests must be conducted?</p></li>
+</ol>
+</div>
+</div>
+<div id="finding-probabilities-using-the-basic-counting-rules" class="section level2 hasAnchor" number="2.6">
+<h2><span class="header-section-number">2.6</span> Finding probabilities using the basic counting rules<a href="introduction-to-probability.html#finding-probabilities-using-the-basic-counting-rules" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The next examples demonstrate how to use the three basic counting rules
+to solve probability problems.</p>
+<div class="example">
+<p><span id="exm:ex16" class="example"><strong>Example 2.16  </strong></span>Suppose that four coins are tossed, what is the probability of getting
+four heads? <strong>Solution</strong> Let <span class="math inline">\(A=\)</span> the event that four heads are
+observed.</p>
+<p>We first determine the number of outcomes from tossing the four coins.
+This is a multiple-step experiment involving four steps each having two
+outcomes. Thus, there are <span class="math inline">\(2\times2\times2\times2=16\)</span> possible outcomes.
+Next, only one outcome will result in four heads <span class="math inline">\((H,H,H,H)\)</span>. Putting it
+all together, we have <span class="math inline">\(n=16\)</span> and <span class="math inline">\(n(A)=1\)</span>, the probability of <span class="math inline">\(A\)</span> is
+<span class="math inline">\(P(A)=n(A)/n=1/16=0.0625\)</span>.</p>
+</div>
+<div class="example">
+<p><span id="exm:ex17" class="example"><strong>Example 2.17  </strong></span>Suppose that four coins are tossed, what is the probability that the
+first two coins are heads?</p>
+<p><strong>Solution:</strong> Let <span class="math inline">\(B=\)</span> the event that the first two coins are heads</p>
+<p>From the previous example, we know that there are 16 possible outcomes.
+The event <span class="math inline">\(B\)</span> will occur if the first two coins are heads and the last
+two coins can be either heads or tails. This is a multi-step experiment
+involving four steps in which the first two steps have 1 outcome and the
+last two steps have 2 outcomes. Thus, there are
+<span class="math inline">\(1\times1\times2\times2=4\)</span> ways in which the event <span class="math inline">\(B\)</span> can occur.
+Putting it all together, <span class="math inline">\(n=16\)</span> and <span class="math inline">\(n(B)=4\)</span>, the probability of <span class="math inline">\(B\)</span> is
+<span class="math inline">\(P(B)=n(B)/n=4/16=0.25\)</span>.</p>
+</div>
+<div class="example">
+<p><span id="exm:ex18" class="example"><strong>Example 2.18  </strong></span>Five manufactures produce a certain electronic device, whose quality
+varies from manufacturer to manufacturer. If you were to select three
+manufacturers at random, what is the probability that the selection
+would contain exactly two of the best three?</p>
+<p><strong>Solution</strong> The experiment consists of randomly selecting three
+manufacturers from a group of five, three of which are designated as
+“best” and two as “not best”. Let <span class="math inline">\(C=\)</span> the event of selecting two of the
+“best” three manufacturers</p>
+<p>We first determine the number of ways of selecting any three of the five
+manufacturers. Thus, <span class="math inline">\(n=5\)</span> and <span class="math inline">\(k=3\)</span>, by the counting rule for
+combinations, there are <span class="math inline">\(C^5_3=\binom{5}3=10\)</span> ways to choose three
+manufactures from the five. Next, we determine the number of ways of
+selecting exactly <span class="math inline">\(2\)</span> manufactures from the best <span class="math inline">\(3\)</span>. Note that this
+outcome involves a two step experiment. In the first step we must select
+<span class="math inline">\(2\)</span> manufactures from the “best” three and in the second step we must
+select <span class="math inline">\(1\)</span> manufacturer from the two “not best” manufacturers. With
+<span class="math inline">\(n=3\)</span> and <span class="math inline">\(k=2\)</span>, there are <span class="math inline">\(C^3_2=\binom{3}2=3\)</span> ways of performing the
+first step. Lastly, with <span class="math inline">\(n=2\)</span> and <span class="math inline">\(k=1\)</span>, there are <span class="math inline">\(C^2_1=\binom{2}1\)</span>
+ways of performing the second step. Thus, <span class="math inline">\(3\times2=6\)</span> ways of selecting
+<span class="math inline">\(2\)</span> of the “best” <span class="math inline">\(3\)</span> manufacturers. Putting it all together, <span class="math inline">\(n=10\)</span> and
+<span class="math inline">\(n(C)=6\)</span>, the probability of <span class="math inline">\(C\)</span> is <span class="math inline">\(P(C)=n(C)/n=6/10=0.6\)</span>.</p>
+</div>
+<div id="exercises-5" class="section level3 unnumbered hasAnchor">
+<h3>Exercises<a href="introduction-to-probability.html#exercises-5" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li>The student representative council (SRC) must select two members
+from five (2 male and 3 female) candidates to be the president and
+deputy president of the SRC.</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li>In how many ways can the two candidate be chosen in such a way that
+the president is always a female and the deputy president is always
+male?</li>
+<li>Suppose that all the candidates have an equal chance of being
+chosen, what is the probability that the president is female and the
+deputy president is male?</li>
+</ol>
+<!-- -->
+<ol start="2" style="list-style-type: decimal">
+<li>Four equally qualified runners, Naledi, Jacques, Kim and Yusuf, run
+a 100-meter print and the order of finish is recorded.</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li>How many orders of finish are possible?</li>
+<li>What is the probability that Yusuf wins the sprint?</li>
+<li>What is the probability that Yusuf wins and Naledi places second?</li>
+<li>What is the probability that Kim finishes last?</li>
+</ol>
+<!-- -->
+<ol start="3" style="list-style-type: decimal">
+<li>A drawer contains four pairs of black socks, five pairs of green
+socks and six pairs of white socks. Suppose that three pairs of
+socks are randomly selected.</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li>What is the probability that exactly two pairs of the selected pairs
+of socks are white?</li>
+<li>What is the probability that all three of the selected pairs of
+socks are of the same color?</li>
+<li>What is the probability that one pair of each color is selected?</li>
+</ol>
+</div>
+</div>
+<div id="conditional-probabilities" class="section level2 hasAnchor" number="2.7">
+<h2><span class="header-section-number">2.7</span> Conditional probabilities<a href="introduction-to-probability.html#conditional-probabilities" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Most of the time, the probability of an event is influenced by whether
+or not a related event has already occurred. The probability of an event
+<span class="math inline">\(A\)</span> occurring when we know that event <span class="math inline">\(B\)</span> has already occurred is called
+a <strong>conditional probability</strong> and it is written as <span class="math inline">\(P(A|B)\)</span>. We use the
+notation <span class="math inline">\(|\)</span> to indicate that we are considering the probability of
+event <span class="math inline">\(A\)</span> given the condition that event <span class="math inline">\(B\)</span> has occurred. Hence, the
+notation <span class="math inline">\(P(A|B)\)</span> reads “the probability of <span class="math inline">\(A\)</span> given <span class="math inline">\(B\)</span>”. As an
+illustration of the application of conditional probability, we consider
+a study that was undertaken at a certain university to determine what
+relationship, if any, exists between mathematics ability and interest in
+mathematics. The ability and interest for <span class="math inline">\(150\)</span> students were determined
+with the results summarized in the following table:</p>
+<p><img src="Figures/Example_Conditional.png" width="1618" /></p>
+<p>Let <span class="math inline">\(L_1=\)</span> the event that a student has a Low interest in mathematics
+<span class="math inline">\(A_1=\)</span> the event that a student has a Average interest in mathematics
+<span class="math inline">\(H_1=\)</span> the event that a student has a High interest in mathematics
+<span class="math inline">\(L_2=\)</span> the event that a student has a Low ability in mathematics <span class="math inline">\(A_2=\)</span>
+the event that a student has a Average ability in mathematics <span class="math inline">\(H_2=\)</span> the
+event that a student has a High ability in mathematics</p>
+<p>Dividing the data values in the table by 150, we obtain
+<span class="math inline">\(P(L_1\cap L_2)=40/150=\)</span>, the probability that a student has a low
+interest and low ability in mathematics. <span class="math inline">\(P(L_1\cap A_2)=8/150=\)</span>, the
+probability that a student has a low interest and average ability in
+mathematics. <span class="math inline">\(P(L_1\cap H_2)=12/150=\)</span>, the probability that a student
+has a low interest and high ability in mathematics.
+<span class="math inline">\(P(A_1\cap L_2)=15/150=\)</span>, the probability that a student has an average
+interest and low ability in mathematics. <span class="math inline">\(P(A_1\cap A_2)=17/150=\)</span>, the
+probability that a student has a average interest and average ability in
+mathematics. <span class="math inline">\(P(A_1\cap H_2)=18/150=\)</span>, the probability that a student
+has an average interest and high ability in mathematics.
+<span class="math inline">\(P(H_1\cap L_2)=5/150=\)</span>, the probability that a student has a high
+interest and low ability in mathematics. <span class="math inline">\(P(H_1\cap A_2)=10/150=\)</span>, the
+probability that a student has a high interest and average ability in
+mathematics. <span class="math inline">\(P(H_1\cap H_2)=25/150=\)</span>, the probability that a student
+has a high interest and high ability in mathematics.</p>
+<p>Since each of these values give the probabilities of the intersection of
+two events, the probabilities are called <strong>joint probabilities</strong>. Table
+<a href="#fig7"><strong>??</strong></a> is referred to as the <em>joint probability table</em>. The table
+gives a summary of the probability information.</p>
+<div class="figure"><span style="display:block;" id="fig:fig7"></span>
+<img src="Figures/Example_Conditional2.png" alt="Joint probability table for the mathematics interest and ability study" width="212" />
+<p class="caption">
+Figure 2.5: Joint probability table for the mathematics interest and ability study
+</p>
+</div>
+<p>The values in the margins of the joint probability table provide the
+probabilities of each event separately. That is, <span class="math inline">\(P(L_1)=0.4000\)</span>,
+<span class="math inline">\(P(A_1)=0.2333\)</span>, <span class="math inline">\(P(H_1)=0.3667\)</span>, <span class="math inline">\(P(L_2)=0.4000\)</span>, <span class="math inline">\(P(A_2)=0.3333\)</span> and
+<span class="math inline">\(P(H_2)=0.2667\)</span>. These probabilities are referred to as <strong>marginal
+probabilities</strong> because of their location in the margins of the joint
+probability table. Note that the marginal probabilities are obtained by
+summing the joint probabilities in the corresponding row or column of
+the joint probability table. For example, the marginal probability of
+having a high ability in mathematics is
+<span class="math inline">\(P(H_1)=P(H_1\cap L2)+P(H_1\cap A2)+P(H_1\cap H2)=0.0333+0.0667+0.1667=0.2667\)</span>.\
+We now turn to our initial task of assessing whether or not there is a
+relationship between mathematics ability and interest. We first
+calculate the conditional probability that a randomly selected student
+has a low ability in mathematics given that the student has a low
+interest in mathematics. In mathematical notation, we want to calculate
+<span class="math inline">\(P(L_2|L_1)\)</span>. Note that <span class="math inline">\(P(L_2|L_1)\)</span> means that we are interested in the
+probability of <span class="math inline">\(L_2\)</span> given that we only have <span class="math inline">\(L_1\)</span> (that is, the student
+has a low interest in mathematics). Thus, <span class="math inline">\(P(L_2|L_1)\)</span> means that we are
+only concerned with the mathematics ability of the <span class="math inline">\(60\)</span> students who
+have a low interest in mathematics. Since <span class="math inline">\(40\)</span> of the <span class="math inline">\(60\)</span> students have
+a low mathematics ability, <span class="math inline">\(P(L_2|L_1)=40/60=2/3=0.6667\)</span>. Thus, given
+that a student has a low interest in mathematics, there is a <span class="math inline">\(67\%\)</span>
+probability that the student has a low mathematics ability.\ We have
+shown that <span class="math inline">\(P(L_2|L_1)=40/60=0.6667\)</span>. Dividing both the numerator and
+denominator of this fraction by <span class="math inline">\(150\)</span>, the total number of students in
+the study, we get <span class="math display">\[
+\begin{aligned}
+P(L_2|L_1)=\frac{40}{60}=\frac{40/150}{60/150}=\frac{0.2667}{0.4000}=0.6667
+\end{aligned}
+\]</span> We can see that <span class="math inline">\(P(L_2|L_1)\)</span> can be calculated as <span class="math inline">\(0.2667/0.4000\)</span>.
+Referring to the joint probability table (Table <a href="#fig4"><strong>??</strong></a>), we can see
+that <span class="math inline">\(0.2667\)</span> is the probability <span class="math inline">\(P(L_1\cap L_2)\)</span> and <span class="math inline">\(0.4000\)</span> is the
+probability <span class="math inline">\(P(L_1)\)</span>. Therefore, <span class="math inline">\(P(L_2|L_1)\)</span> can be expressed as a
+ratio of the joint probability <span class="math inline">\(P(L_1\cap L_2)\)</span> to the marginal
+probability <span class="math inline">\(P(L_1)\)</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+P(L_2|L_1)=\frac{P(L_1\cap L_2)}{P(L_1)}=\frac{0.2667}{0.4000}=0.6667
+\end{aligned}
+\]</span> This leads to the following general formula for calculating
+conditional probabilities. For any two events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, <span class="math display">\[
+\begin{eqnarray}
+P(A|B)=\frac{P(A\cap B)}{P(B)}\\
+\text{or}\\
+P(B|A)=\frac{A\cap B}{P(A)}
+\end{eqnarray}
+\]</span> The Venn diagram in Figure @(fig:fig8) illustrates concept of a
+conditional probability. The circle on the right shows that event <span class="math inline">\(B\)</span>
+has occurred; the portion of the circle that overlaps with event <span class="math inline">\(A\)</span>
+denotes the event <span class="math inline">\((A\cap B)\)</span>. We know that once event <span class="math inline">\(B\)</span> has occurred,
+the only way that we can also observe event A is for the event
+<span class="math inline">\((A\cap B)\)</span> to occur. Thus, the ratio <span class="math inline">\(P(A\cap B)/P(B)\)</span> provides the
+conditional probability that we will observe event <span class="math inline">\(A\)</span> given that event
+<span class="math inline">\(B\)</span> has already occurred.</p>
+<div class="figure"><span style="display:block;" id="fig:fig8"></span>
+<img src="Figures/Conditional_Venn.jpg" alt="Motivating the definition of a conditional probability" width="210" />
+<p class="caption">
+Figure 2.6: Motivating the definition of a conditional probability
+</p>
+</div>
+<div id="independent-events" class="section level3 hasAnchor" number="2.7.1">
+<h3><span class="header-section-number">2.7.1</span> Independent events<a href="introduction-to-probability.html#independent-events" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We now introduce the concept of <strong>independent</strong> events. Two events, <span class="math inline">\(A\)</span>
+and <span class="math inline">\(B\)</span> are said to be independent if <span class="math inline">\(P(A|B)=P(A)\)</span>, otherwise, they are
+said to be dependent. The idea behind the independence of events is that
+the knowledge that the event <span class="math inline">\(B\)</span> has occurred will have no influence on
+whether or not the event <span class="math inline">\(A\)</span> will occur. In other words, the happening
+of one event (<span class="math inline">\(B\)</span>) does not affect the happening of the other event
+(<span class="math inline">\(A\)</span>), vice versa. In our example, we can see that <span class="math inline">\(P(L_2)=0.4000\)</span>,
+<span class="math inline">\(P(L_2|L_1)=0.6667\)</span>, <span class="math inline">\(P(L_2|A_1)=0.0533/0.2333=0.2285\)</span> and
+<span class="math inline">\(P(L_2|H_1)=0.0800/0.3667=0.2182\)</span>. Thus, we see that the probability of
+a low ability in mathematics is affected by the level of interest the
+student has in mathematics. That is, <span class="math inline">\(P(L_2|L_1)\neq P(L_2)\)</span>,
+<span class="math inline">\(P(L_2|A_1)\neq P(L_2)\)</span> and <span class="math inline">\(P(L_2|H_1)\neq P(L_2)\)</span>. Therefore, we can
+say that the events <span class="math inline">\(L_2\)</span> and <span class="math inline">\(L_1\)</span> are dependent, the same applies to
+events <span class="math inline">\(L_2\)</span> and <span class="math inline">\(A_1\)</span> as well as the events <span class="math inline">\(L_2\)</span> and <span class="math inline">\(H_1\)</span>. Finally,
+we can use these results to solve our initial task, which is to assess
+the relationship, if any, between a student’s interest and ability in
+mathematics. Since the events, <span class="math inline">\(L_2\)</span> and <span class="math inline">\(L_1\)</span>; <span class="math inline">\(L_2\)</span> and <span class="math inline">\(A_1\)</span> and
+<span class="math inline">\(L_2\)</span> and <span class="math inline">\(H_1\)</span>, are dependent, we can say that there is a relationship
+between a student’s interest in mathematics and their ultimate ability
+in mathematics.</p>
+</div>
+<div id="multiplication-rule" class="section level3 hasAnchor" number="2.7.2">
+<h3><span class="header-section-number">2.7.2</span> Multiplication rule<a href="introduction-to-probability.html#multiplication-rule" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>From the definition of conditional probability, we can obtain the
+following result <span class="math display">\[
+\begin{aligned}
+P(A\cap B)=P(A|B)\times P(B)
+\end{aligned}
+\]</span> or <span class="math display">\[
+\begin{aligned}
+P(A\cap B)=P(B|A)\times P(A)
+\end{aligned}
+\]</span> This is referred to as the <strong>multiplication rule</strong>. The
+multiplication rule is useful for calculating the probability of the
+intersection of two events. This rule is also important because often,
+say <span class="math inline">\(P(A)\)</span> and <span class="math inline">\(P(A|B)\)</span>, are given and we want to obtain <span class="math inline">\(P(A\cap B)\)</span>.
+This is demonstrated in the following example.</p>
+<div class="example">
+<p><span id="exm:ex19" class="example"><strong>Example 2.19  </strong></span>Consider a newspaper circulation department where it is known that
+<span class="math inline">\(84\%\)</span> of the households in a particular neighborhood subscribe to the
+daily edition of the paper. If we let <span class="math inline">\(D\)</span> denote the event that a
+household subscribes to the daily edition, <span class="math inline">\(P(D) = .84\)</span>. In addition, it
+is known that the probability that a household that already holds a
+daily subscription also subscribes to the Sunday edition (event <span class="math inline">\(S\)</span>) is
+<span class="math inline">\(.75\)</span>; that is, <span class="math inline">\(P(S ∣ D) = .75\)</span>. What is the probability that a
+household subscribes to both the Sunday and daily editions of the
+newspaper?</p>
+<p><strong>Solution:</strong> Using the multiplication rule, we compute the desired
+<span class="math inline">\(P(S\cap D)\)</span> as <span class="math display">\[
+\begin{aligned}
+P(S\cap D)=P(D)P(S | D)=.84(.75)=.63
+\end{aligned}
+\]</span> We now know that <span class="math inline">\(63\%\)</span> of the households subscribe to both the
+Sunday and daily editions. When two events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are independent,
+the multiplication rule can be written as <span class="math inline">\(P(A\cap B)=P(A)P(B)\)</span>.</p>
+</div>
+</div>
+<div id="exercises-6" class="section level3 unnumbered hasAnchor">
+<h3>Exercises<a href="introduction-to-probability.html#exercises-6" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li>Consider an experiment that can result in one of five equally likely
+simple events <span class="math inline">\(E_1,E_2,\dots,E_5\)</span>. Events <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> and <span class="math inline">\(C\)</span> are
+defined as follows. Define the events</li>
+</ol>
+<p><span class="math display">\[A=\{E_1,E_3\}, B=\{E_1,E_2,E_4,E_5\}\;\text{and}\;C=\{E_3,E_4\}\]</span></p>
+<p>with probabilities <span class="math inline">\(P(A)=0.4\)</span>, <span class="math inline">\(P(B)=0.8\)</span> and <span class="math inline">\(P(C)=0.4\)</span>.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Calculate the probabilities <span class="math inline">\(P(A^c)\)</span>, <span class="math inline">\(P(A\cap B)\)</span>, <span class="math inline">\(P((A\cap B)^c)\)</span>
+and <span class="math inline">\(P(A|B)\)</span>.</li>
+<li>Are the events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> independent?</li>
+<li>Are the events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> mutually exclusive?</li>
+</ol>
+<!-- -->
+<ol start="2" style="list-style-type: decimal">
+<li>Suppose that <span class="math inline">\(P(A)=0.1\)</span> and <span class="math inline">\(P(B)=0.5\)</span>. Answer the following
+questions:</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li>Given that <span class="math inline">\(P(A|B)=0.1\)</span>, calculate <span class="math inline">\(P(A\cap B)\)</span>.</li>
+<li>Given that <span class="math inline">\(P(A|B)=0.1\)</span>, are <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> independent?</li>
+<li>Given that <span class="math inline">\(P(A\cup B)=0.65\)</span>, are <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> mutually exclusive?</li>
+</ol>
+<!-- -->
+<ol start="3" style="list-style-type: decimal">
+<li>A group of research proposals was evaluated by a panel of experts to
+decide whether or not they were worthy of funding. When these same
+proposals were submitted to a second independent panel of experts,
+the decision to fund was reversed in 30% of the cases. If the
+probability that a proposal is judged worthy of funding is 0.2,
+calculate the probability that</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li>a worthy proposal is approved by both panels.</li>
+<li>a worthy proposal is disapproved by both panels.</li>
+<li>a worthy proposal is approved by one panel.</li>
+</ol>
+<!-- -->
+<ol start="4" style="list-style-type: decimal">
+<li>A university student goes to one of two coffee shops on campus,
+choosing Cozy Coffee 30% of the time and Vida e Caffé 70% of the
+time. Regardless of where she goes, she buys a cafe mocha on 60% of
+her visits.</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li>The next time she goes for into a coffee shop on campus, what is the
+probability that she goes to Vida e Caffé and orders a cafe mocha?</li>
+<li>Are the two events in part a. independent? Motivate your answer.</li>
+<li>If she goes into a coffee shop and orders a cafe mocha, what is the
+probability that she is in Cozy Coffee?</li>
+</ol>
+<!-- -->
+<ol start="5" style="list-style-type: decimal">
+<li>The population of a particular country consists of three ethnic
+groups. Each individual belongs to one of four major blood groups.</li>
+</ol>
+<p><img src="Figures/Exercise_Conditional_Prob.png" width="328" /></p>
+<p>Suppose that an individual is randomly selected from the population and
+define the events <span class="math inline">\(A=\)</span> type A selected, <span class="math inline">\(B=\)</span>type B selected and
+<span class="math inline">\(C=\)</span>ethnic group 3 selected.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Calculate the probability <span class="math inline">\(P(A)\)</span>.</li>
+<li>Calculate the probability <span class="math inline">\(P(A|C)\)</span></li>
+<li>If the selected individual does not have type <span class="math inline">\(B\)</span> blood, what is the
+probability that he or she is from ethnic group 1.</li>
+</ol>
+</div>
+</div>
+<div id="bayes-theorem" class="section level2 hasAnchor" number="2.8">
+<h2><span class="header-section-number">2.8</span> Bayes’ Theorem<a href="introduction-to-probability.html#bayes-theorem" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Consider an experiment of rolling a die and define the two events:</p>
+<p><span class="math inline">\(E=\)</span> the event of observing an even number <span class="math inline">\(E^c\)</span> the event of observing
+an odd number</p>
+<p>Taken together, event <span class="math inline">\(E\)</span> and <span class="math inline">\(E^c\)</span> make up the sample space <span class="math inline">\(S\)</span>,
+consisting of all the possible number of points facing up, that is
+<span class="math inline">\(\{1,2,3,4,5,6\}\)</span>. Since a prime number can be either even (2) or
+odd(1,3,5), the event <span class="math inline">\(A\)</span>, which is that the number facing up is a prime
+number consists of both those simple events in <span class="math inline">\(A\)</span> <strong>and</strong> <span class="math inline">\(E\)</span> and those
+simple events in <span class="math inline">\(B\)</span> and <span class="math inline">\(E^c\)</span>. Since these two events are mutually
+exclusive, we can write the event <span class="math inline">\(A\)</span> as</p>
+<p><span class="math display">\[
+\begin{aligned}
+B=(B\cap E)\cup(B\cap E^c)
+\end{aligned}
+\]</span> and</p>
+<p><span class="math inline">\(P(B)=P(B\cap E)+P(B\cap E^c)=1/6+3/6=2/3=0.6667\)</span></p>
+<p>Suppose now that the sample space can be partitioned into <span class="math inline">\(k\)</span>
+sub-populations, <span class="math inline">\(A_1,A_2,\dots,A_k\)</span>, that are mutually exclusive and
+exhaustive. Events are said to be exhaustive if one <span class="math inline">\(A_i\)</span> must occur,
+such that <span class="math inline">\(A_1\cup A_2\cup\dots\cup A_k=S\)</span>. As above, the event <span class="math inline">\(B\)</span> can
+be expressed as <span class="math display">\[
+\begin{aligned}
+B=(B\cap A_1)\cup(B\cap A_2)\cup\dots\cup(B\cap A_k)
+\end{aligned}
+\]</span> Then,</p>
+<p><span class="math display">\[
+\begin{aligned}
+P(B)=P(B\cap A_1)+P(B\cap A_2)+\dots+P(B\cap A_k)
+\end{aligned}
+\]</span> This is illustrated in Figure <a href="introduction-to-probability.html#fig:fig9">2.7</a>.</p>
+<div class="figure"><span style="display:block;" id="fig:fig9"></span>
+<img src="Figures/Total_Probability.png" alt="Decomposition of the event $B$" width="328" />
+<p class="caption">
+Figure 2.7: Decomposition of the event <span class="math inline">\(B\)</span>
+</p>
+</div>
+<p>We can go one step further and use the multiplication rule to write
+<span class="math inline">\(P(B\cap A_i)=P(B|A_i)P(A_i)\)</span>, for <span class="math inline">\(i=1,2,\dots,k\)</span>. The result is known
+as the <strong>law of total probability</strong>.</p>
+<div class="definition">
+<p><span id="def:unlabeled-div-1" class="definition"><strong>Definition 2.1  (Law of Total Probability) </strong></span>Let <span class="math inline">\(A_1,A_2,\dots,A_k\)</span> be mutually exclusive and exhaustive events.
+Then for any event <span class="math inline">\(B\)</span>, <span class="math display">\[\begin{eqnarray}
+P(B)&amp;=&amp;P(B\cap A_1)+P(B\cap A_2)+\dots+P(B\cap A_k)\\
+&amp;=&amp;\sum^k_{i=1}P(B|A_i)P(A_i)
+\end{eqnarray}\]</span></p>
+</div>
+<div class="example">
+<p><span id="exm:unlabeled-div-2" class="example"><strong>Example 2.20  (Oil Change) </strong></span>The members of a consulting firm rent cars from three rental agencies:</p>
+<ul>
+<li><span class="math inline">\(60\%\)</span> from agency 1</li>
+<li><span class="math inline">\(30\%\)</span> from agency 2</li>
+<li><span class="math inline">\(10\%\)</span> from agency 3</li>
+</ul>
+<p><span class="math inline">\(9\%\)</span> of the cars from agency 1 need an oil change, <span class="math inline">\(20\%\)</span> of the cars
+from agency 2 need an oil change and <span class="math inline">\(6\%\)</span> of the cars from agency 3
+need an oil change. Calculate the probability that a rental car
+delivered to the firm will need an oil change.</p>
+<p><strong>Solution:</strong></p>
+<p>Let <span class="math inline">\(B=\)</span> the event that a rental car needs an oil change</p>
+<p>We have the partition:</p>
+<ul>
+<li><span class="math inline">\(A_1=\)</span> the event that a car comes from agency 1</li>
+<li><span class="math inline">\(A_2=\)</span> the event that a car comes from agency 2</li>
+<li><span class="math inline">\(A_3=\)</span> the event that a car comes from agency 3</li>
+</ul>
+<p>We have the following probabilities:</p>
+<p>By the law of total probability, the probability that a rental car
+delivered to the firm will need an oil change is: <span class="math display">\[\begin{eqnarray}
+P(B)&amp;=&amp;P(B|A_1)P(A_1)+P(B|A_2)P(A_2)+P(B|A_3)P(A_3)\\
+&amp;=&amp;0.09(0.6)+0.2(0.3)+0.06(0.1)\\
+&amp;=&amp;0.12
+\end{eqnarray}\]</span></p>
+</div>
+<p>Now, suppose that we know that a car delivered to the firm needs an oil
+change, what is the probability that the rental car came from Agency 2?
+This probability can be obtained by the Bayes’ Theorem.</p>
+<div class="definition">
+<p><span id="def:Bayes" class="definition"><strong>Definition 2.2  (Bayes' Theorem) </strong></span>Let <span class="math inline">\(A_1,A_2,\dots,A_k\)</span> be mutually exclusive and exhaustive events with
+<span class="math inline">\(P(A_i)&gt;0\)</span>, for <span class="math inline">\(i=1,2,\dots,k\)</span>. Then for any event <span class="math inline">\(B\)</span>, where <span class="math inline">\(P(B)&gt;0\)</span>,</p>
+<p><span class="math inline">\(P(A_j|B)=\frac{P(A_j\cap B)}{P(B)}=\frac{P(B|A_j)P(A_j)}{\sum^k_{i=1}P(B|A_i)P(A_i)}\)</span>
+for <span class="math inline">\(j=1,2,\dots,k\)</span></p>
+</div>
+<p>Now, we return to the above question.</p>
+<div class="example">
+<p><span id="exm:unlabeled-div-3" class="example"><strong>Example 2.21  (Oil Change-Continued) </strong></span>Suppose that we know that a rental car delivered to the firm needs an
+oil change, what is the probability that the rental car came from Agency
+2?</p>
+<p><strong>Solution:</strong></p>
+<p><span class="math display">\[
+\begin{eqnarray}
+P(A_2|B)&amp;=&amp;\frac{P(B|A_2)P(A_2)}{P(B|A_1)P(A_1)+P(B|A_2)P(A_2)+P(B|A_3)P(A_3)}\\
+&amp;=&amp;\frac{0.2(0.3)}{0.09(0.6)+0.2(0.3)+0.06(0.1)}\\
+&amp;=&amp;\frac{0.06}{0.12}\\
+&amp;=&amp;\frac{P(B\cap A_2)}{P(B)}\\
+&amp;=&amp;0.50
+\end{eqnarray}
+\]</span> - Recall that <span class="math inline">\(P(A_2)\)</span>, the probability that a rental car comes from
+Agency 2 is <span class="math inline">\(0.3\)</span> - Given that it needs an oil change, the new</p>
+</div>
+<div id="exercises-7" class="section level3 unnumbered hasAnchor">
+<h3>Exercises<a href="introduction-to-probability.html#exercises-7" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li>A sample is selected from one of two populations, <span class="math inline">\(S_1\)</span> and <span class="math inline">\(S_2\)</span>,
+with <span class="math inline">\(P(S_1)=0.7\)</span> and <span class="math inline">\(P(S_2)=0.3\)</span>. The probabilities that an event
+<span class="math inline">\(A\)</span> occurs, given <span class="math inline">\(P(A|S_1)=0.2\)</span> and <span class="math inline">\(P(A|S_2)\)</span>, calculate</li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(P(A)\)</span>, using the Law of Total probability.</li>
+<li><span class="math inline">\(P(S_1|A)\)</span> using Bayes’ theorem.</li>
+</ol>
+<!-- -->
+<ol start="2" style="list-style-type: decimal">
+<li><p>A population can be divided into two subgroups that occur with
+probabilities <span class="math inline">\(60\%\)</span> and <span class="math inline">\(40\%\)</span>, respectively. An event <span class="math inline">\(A\)</span> occurs
+<span class="math inline">\(30\%\)</span> of the time in the first subgroup and <span class="math inline">\(50\%\)</span> of the time in
+the second subgroup. What is the probability of the event <span class="math inline">\(A\)</span>,
+regardless of which subgroup it comes from?</p></li>
+<li><p>Hatfield crime records show that <span class="math inline">\(20\%\)</span> of all crimes are violent
+and <span class="math inline">\(80\%\)</span> are non-violent, involving theft, forgery, and so on.
+Ninety percent of violent crimes are reported versus <span class="math inline">\(70\%\)</span> of
+non-violent crimes.</p></li>
+</ol>
+<!-- -->
+<ol style="list-style-type: lower-alpha">
+<li>What is the overall reporting rate for crimes in Hatfield?</li>
+<li>If a crime in progress is reported to the police, what is the
+probability that it is violent? What is the probability that it is
+nonviolent?</li>
+</ol>
+<!-- -->
+<ol start="4" style="list-style-type: decimal">
+<li>Suppose that, in Gauteng, <span class="math inline">\(45\%\)</span> of all matric finalists go to the
+University of Pretoria, <span class="math inline">\(35\%\)</span> go to the University of Wits and
+<span class="math inline">\(20\%\)</span> go to the University of Johannesburg. The pass rates for
+weapons at the three universities are <span class="math inline">\(0.9\)</span>, <span class="math inline">\(0.8\)</span> and <span class="math inline">\(0.85\)</span>,
+respectively. If a student at one of the Universities passes, what
+is the probability that the student went to the University of
+Pretoria? University of Wits?</li>
+</ol>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="descriptive-statistics.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="inferential-statistics.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/02-Introduction-to-Probability.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
