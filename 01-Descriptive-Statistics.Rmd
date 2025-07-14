@@ -1466,7 +1466,7 @@ The correlation coefficient can be interpreted as follows:
 
 The plot below illustrates how these relationships would look visually. Note that a correlation near 0 does not mean that the variables have *no* relationship - just that they do not have a *linear* relationship.
 
-```{r echo=FALSE, message=FALSE}
+```{r echo=FALSE, message=FALSE,warning=FALSE}
 # Load required packages
 library(ggplot2)
 library(dplyr)
