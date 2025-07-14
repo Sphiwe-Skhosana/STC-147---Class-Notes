@@ -207,7 +207,6 @@ The HTML output format for this example is bookdown::gitbook,</p>" />
 <li>Breed: The cow’s breed: 1 for Jersey, 2 for Holstein, 3 for Ayrshire.</li>
 <li>Milk: The liters per day produced by each cow.</li>
 </ul>
-<pre><code>## Warning: package &#39;readxl&#39; was built under R version 4.3.3</code></pre>
 <table>
 <thead>
 <tr class="header">
@@ -483,9 +482,6 @@ Figure 1.1: Image from Freepik
 <h3><span class="header-section-number">1.2.1</span> Frequency tables<a href="descriptive-statistics.html#frequency-tables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Consider the Cows example. Suppose Rethabile wants to know how many of each cow breed are in the dataset. She can represent this using a <strong>frequency distribution</strong>.</p>
 <p><strong>Frequency Distribution:</strong> <em>A frequency distribution is a tabular summary of data showing the number (frequency) of observations in each of several nonoverlapping categories or classes.</em></p>
-<pre><code>## 
-##  1  2  3 
-## 10 12  8</code></pre>
 <p>From the table above, we can see that there are 10 cows from Breed 1 (Jersey), 12 cows from Breed 2 (Holstein), and 8 cows from Breed 3 (Ayrshire).</p>
 <p>To create your own frequency table in Excel, follow the steps below:</p>
 <p>Step 1: Go to the Insert tab, click on PivotTable, and select the “From Table/Range” option.</p>
@@ -516,7 +512,12 @@ nonoverlapping categories. However, we are often interested in the proportion, o
 <p>For a data set with <span class="math inline">\(n\)</span> observations, the relative frequency of each class can be determined as follows:</p>
 <p><span class="math display">\[\textrm{Relative frequency of category } i = \frac{\textrm{number of observations in category } i}{n}.\]</span>
 The <strong>percent frequency</strong> is the relative frequency multiplied by 100.</p>
-<p><span class="math display">\[\textrm{Percent frequency of category } i = 100 \times \textrm{Relative frequency of category } i = 100 \times \frac{\textrm{number of observations in category } i}{n}.\]</span></p>
+<p><span class="math display">\[
+\begin{eqnarray}
+\textrm{Percent frequency of category } i &amp;=&amp; 100 \times \textrm{Relative frequency of category } i\\
+&amp;=&amp; 100 \times \frac{\textrm{number of observations in category } i}{n}.
+\end{eqnarray}
+\]</span></p>
 <p>Q: What is the relative frequency of Jersey cows (Breed 1) in the Cows dataset? What is the percent frequency?</p>
 <p>To obtain a <strong>relative frequency distribution table</strong> in Excel, follow Steps 1-5 to obtain a frequency distribution table. Then do the following:</p>
 <p>Step 7 (Percentage frequency distribution): In the Value Field Settings, navigate to the “Show Values As” tab.</p>
@@ -656,7 +657,7 @@ Suppose Rethabile wants to summarise the weights of her cows. To create a freque
 <p>To create a frequency table for continuous data in Excel, we can follow these steps:</p>
 <p>Step 1: Create classes in Excel. Here, we have copied the Cow ID and Weight columns to a new sheet, for ease of reading. We then create a new column called Class, and assign each value to a class using the following formula:</p>
 <p><span class="math display">\[=IF(\textrm{value}\leq\textrm{first lower limit};\textrm{ set class = }1;
-\textrm{value}\leq\textrm{second lower limit};\textrm{ set class = }2;...
+\textrm{value}\leq\textrm{second lower limit};\textrm{ set class = }2;...\\
 \textrm{value}\leq\textrm{fifth lower limit};\textrm{ set class = }5)\]</span></p>
 <p><img src="Chapter%201/Images/CreateClasses.png" width="50%" style="display: block; margin: auto;" /></p>
 <p>Step 2: Create a Pivot Table and select both the Weight and Class columns.</p>
@@ -717,18 +718,6 @@ From these tables, Rethabile can say the following:</p>
 </tbody>
 </table>
 <p>The table below is the cumulative frequency distribution based on the frequency distribution of Option 3 in the Cows example.</p>
-<pre><code>## Warning: package &#39;dplyr&#39; was built under R version 4.3.3</code></pre>
-<pre><code>## 
-## Attaching package: &#39;dplyr&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:stats&#39;:
-## 
-##     filter, lag</code></pre>
-<pre><code>## The following objects are masked from &#39;package:base&#39;:
-## 
-##     intersect, setdiff, setequal, union</code></pre>
-<pre><code>## New names:
-## • `` -&gt; `...4`
-## • `` -&gt; `...9`</code></pre>
 <table>
 <thead>
 <tr class="header">
@@ -766,8 +755,8 @@ From these tables, Rethabile can say the following:</p>
 </tbody>
 </table>
 <p>To calculate the cumulative frequency table in Excel, simply add the frequency of each class to the frequency of all previous classes.</p>
-<p><img src="Chapter%201/Images/CF1.png" width="50%" style="display: block; margin: auto;" /><img src="Chapter%201/Images/CF2.png" width="50%" style="display: block; margin: auto;" /><img src="Chapter%201/Images/CF3.png" width="50%" style="display: block; margin: auto;" /><img src="Chapter%201/Images/CF4.png" width="50%" style="display: block; margin: auto;" /><img src="Chapter%201/Images/CF5.png" width="50%" style="display: block; margin: auto;" />
-The cumulative relative frequency and cumulative percentage frequency can be calculated as before.</p>
+<p><img src="Chapter%201/Images/CF1.png" width="50%" style="display: block; margin: auto;" /><img src="Chapter%201/Images/CF2.png" width="50%" style="display: block; margin: auto;" /><img src="Chapter%201/Images/CF3.png" width="50%" style="display: block; margin: auto;" /><img src="Chapter%201/Images/CF4.png" width="50%" style="display: block; margin: auto;" /><img src="Chapter%201/Images/CF5.png" width="50%" style="display: block; margin: auto;" /></p>
+<p>The cumulative relative frequency and cumulative percentage frequency can be calculated as before.</p>
 <p><img src="Chapter%201/Images/CowsCumul.png" width="50%" style="display: block; margin: auto;" /></p>
 <p>Using the cumulative frequency tables, we can deduce the following:</p>
 <ul>
@@ -1284,8 +1273,7 @@ This can be calculated manually in Excel. Using this formula, we find that the c
 <li>Third histogram (symmetrical): <span class="math inline">\(\approx -0.05\)</span></li>
 <li>Fourth histogram (highly negatively skew): <span class="math inline">\(\approx -3.0\)</span></li>
 </ol>
-<p><img src="_main_files/figure-html/unnamed-chunk-80-1.png" width="672" /></p>
-<pre><code>## Loading required package: moments</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-79-1.png" width="672" /></p>
 <pre><code>## Skewness values:</code></pre>
 <pre><code>## Moderately Positive: 1.369491</code></pre>
 <pre><code>## Moderately Negative: -1.374459</code></pre>
@@ -1442,7 +1430,7 @@ and obtain a value of approximately -0,05.</p>
 </ul>
 <p>The plot below illustrates how these relationships would look visually. Note that a correlation near 0 does not mean that the variables have <em>no</em> relationship - just that they do not have a <em>linear</em> relationship.</p>
 <pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 4.3.3</code></pre>
-<p><img src="_main_files/figure-html/unnamed-chunk-92-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-91-1.png" width="672" /></p>
 
 </div>
 </div>

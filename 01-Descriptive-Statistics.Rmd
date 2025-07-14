@@ -12,7 +12,7 @@ The goals of descriptive statistics include:
 
 It is important to note that this step is all about *describing* data. We are not looking for evidence to support hypotheses, or trying to force any kind of information out of the data. We are simply exploring the data as if it were a landscape.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE, message=FALSE, warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -31,7 +31,7 @@ Rethabile is a dairy farmer who has collected data regarding the milk yield (in 
 - Breed: The cow's breed: 1 for Jersey, 2 for Holstein, 3 for Ayrshire.
 - Milk: The liters per day produced by each cow.
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, warning=FALSE}
 library(readxl)
 
 cows <- read_excel("Chapter 1/dairy_cows_data.xlsx",sheet="Sheet1")
@@ -39,7 +39,7 @@ knitr::kable(cows)
 
 ```
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center',fig.cap='Image from Freepik'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center',fig.cap='Image from Freepik'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -63,16 +63,13 @@ Consider the Cows example. Suppose Rethabile wants to know how many of each cow 
 
 **Frequency Distribution:** *A frequency distribution is a tabular summary of data showing the number (frequency) of observations in each of several nonoverlapping categories or classes.*
 
-```{r,echo=FALSE}
-table(cows$Breed)
-```
 From the table above, we can see that there are 10 cows from Breed 1 (Jersey), 12 cows from Breed 2 (Holstein), and 8 cows from Breed 3 (Ayrshire).
 
 To create your own frequency table in Excel, follow the steps below:
 
 Step 1: Go to the Insert tab, click on PivotTable, and select the "From Table/Range" option.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,message=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -82,7 +79,7 @@ knitr::include_graphics(c("Chapter 1/Images/Pivot1.png"))
 
 Step 2: Select the relevant data in Excel. Here, we want to analyse the Breed variable, so we only select the Breed column.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -92,7 +89,7 @@ knitr::include_graphics(c("Chapter 1/Images/Pivot2.png"))
 
 The PivotTable Fields panel will then pop up on the right of the screen.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -101,7 +98,7 @@ knitr::include_graphics(c("Chapter 1/Images/Pivot3.png"))
 ```
 Step 3: Drag the Breed variable into the Rows area. This will create a table on your spreadsheet with the Breed categories.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -113,7 +110,7 @@ Step 4: Also drag Breed into the Values area. By default, Excel will calculate t
 
 Q: Why is calculating the sum of the Breed incorrect?
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -123,7 +120,7 @@ knitr::include_graphics(c("Chapter 1/Images/Pivot5.png"))
 
 Step 5: Click on Sum of Breed and select the Value Feed Settings option.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -133,7 +130,7 @@ knitr::include_graphics(c("Chapter 1/Images/Pivot6.png"))
 
 Step 6: Select the "Count" option. We want to count the number of times each breed occurs.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -141,7 +138,7 @@ knitr::include_graphics(c("Chapter 1/Images/Pivot7.png"))
 
 ```
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -151,7 +148,7 @@ knitr::include_graphics(c("Chapter 1/Images/Pivot8.png"))
 
 Step 7: The final result!
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -172,7 +169,12 @@ For a data set with $n$ observations, the relative frequency of each class can b
 $$\textrm{Relative frequency of category } i = \frac{\textrm{number of observations in category } i}{n}.$$
 The **percent frequency** is the relative frequency multiplied by 100.
 
-$$\textrm{Percent frequency of category } i = 100 \times \textrm{Relative frequency of category } i = 100 \times \frac{\textrm{number of observations in category } i}{n}.$$
+$$
+\begin{eqnarray}
+\textrm{Percent frequency of category } i &=& 100 \times \textrm{Relative frequency of category } i\\ 
+&=& 100 \times \frac{\textrm{number of observations in category } i}{n}.
+\end{eqnarray}
+$$
 
 Q: What is the relative frequency of Jersey cows (Breed 1) in the Cows dataset? What is the percent frequency?
 
@@ -180,7 +182,7 @@ To obtain a **relative frequency distribution table** in Excel, follow Steps 1-5
 
 Step 7 (Percentage frequency distribution): In the Value Field Settings, navigate to the "Show Values As" tab.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -190,7 +192,7 @@ knitr::include_graphics(c("Chapter 1/Images/PivotPer1.png"))
 
 Step 8 (Percentage frequency distribution): Select "\% of Parent Row Total" and click OK.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -200,7 +202,7 @@ knitr::include_graphics(c("Chapter 1/Images/PivotPer2.png"))
 
 Step 9 (Percentage frequency distribution): Final results!
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -212,7 +214,7 @@ To obtain a **relative frequency distribution**, simply edit your percentage fre
 
 Step 9 (Relative frequency distribution): Click on "Number Format" in the Value Field Setings table.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -222,7 +224,7 @@ knitr::include_graphics(c("Chapter 1/Images/PivotRel1.png"))
 
 Step 10 (Relative frequency distribution): Select "Number" and specify the amount of decimal places you want.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -232,7 +234,7 @@ knitr::include_graphics(c("Chapter 1/Images/PivotRel2.png"))
 
 Step 11 (Relative frequency distribution): Final results!
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -243,7 +245,7 @@ knitr::include_graphics(c("Chapter 1/Images/PivotRel3.png"))
 Alternatively, you can manually create relative and percentage frequency tables from your frequency table as follows:
 
 
-```{r, echo=FALSE,out.width="49%",out.height="20%",fig.show='hold',fig.align='center'}
+```{r, echo=FALSE,warning=FALSE,out.width="49%",out.height="20%",fig.show='hold',fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -273,7 +275,7 @@ $$\textrm{Class width } = \frac{\textrm{max weight} - \textrm{min weight}}{\text
 She thus sets up the classes as follows:
 
 Option 1 (incorrect):
-```{r,echo=FALSE}
+```{r,echo=FALSE,warning=FALSE}
 
 cows.classes1 <- read.table("Chapter 1/cows_classes.txt",header=T)
 
@@ -286,7 +288,7 @@ However, there is an issue with these classes. In which class should a cow be if
 In order for these classes to be valid, they must be *non-overlapping*. To construct non-overlapping classes, add the class width *minus one* to the lower limit of each class. This results in the following class limits:
 
 Option 2 (correct):
-```{r,echo=FALSE}
+```{r,echo=FALSE,warning=FALSE}
 
 cows.classes3 <- read.table("Chapter 1/cows_classes3.txt",header=T)
 
@@ -298,7 +300,7 @@ Although these class limits are now valid, the final class, 614-653, will contai
 To solve this, Rethabile deicdes to slightly change the class width. Making the class width equal to 40, she ends up with the following class limits:
 
 Option 3 (correct and convenient):
-```{r,echo=FALSE}
+```{r,echo=FALSE,warning=FALSE}
 
 cows.classes2 <- read.table("Chapter 1/cows_classes2.txt",header=T)
 
@@ -312,11 +314,11 @@ To create a frequency table for continuous data in Excel, we can follow these st
 Step 1: Create classes in Excel. Here, we have copied the Cow ID and Weight columns to a new sheet, for ease of reading. We then create a new column called Class, and assign each value to a class using the following formula:
 
 $$=IF(\textrm{value}\leq\textrm{first lower limit};\textrm{ set class = }1;
-\textrm{value}\leq\textrm{second lower limit};\textrm{ set class = }2;...
+\textrm{value}\leq\textrm{second lower limit};\textrm{ set class = }2;...\\
 \textrm{value}\leq\textrm{fifth lower limit};\textrm{ set class = }5)$$
 
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -326,7 +328,7 @@ knitr::include_graphics(c("Chapter 1/Images/CreateClasses.png"))
 
 Step 2: Create a Pivot Table and select both the Weight and Class columns.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -336,7 +338,7 @@ knitr::include_graphics(c("Chapter 1/Images/PivotCts1.png"))
 
 Step 3: Drag Class to the Rows area, and Weight to the Values area.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -346,7 +348,7 @@ knitr::include_graphics(c("Chapter 1/Images/PivotCts2.png"))
 
 Step 4: Go to the Value Field Settings table for Weight, and change the "Summarise Values By..." option to Count.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -356,7 +358,7 @@ knitr::include_graphics(c("Chapter 1/Images/PivotCts3.png"))
 
 Step 5: Final result!
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -365,7 +367,7 @@ knitr::include_graphics(c("Chapter 1/Images/PivotCts4.png"))
 ```
 We can create the relative and pergentace frequency distribution tables either by editing the Pivot Table, or by adding manually calculating columns, just as in the categorical data case.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -391,16 +393,17 @@ In order to answer these questions, it is necessary to construct a **cumulative 
 
 The structure of a cumulative frequency distribution table is shown below:
 
-```{r,echo=FALSE}
+```{r, echo=FALSE, warning=FALSE}
 
 cumul <- read.table("Chapter 1/cumul.txt",header=T,sep=";")
 
 knitr::kable(cumul)
 
 ```
+
 The table below is the cumulative frequency distribution based on the frequency distribution of Option 3 in the Cows example.
 
-```{r,echo=FALSE}
+```{r, echo=FALSE, warning=FALSE,message=FALSE}
 
 library(dplyr)
 
@@ -422,16 +425,17 @@ knitr::kable(freq_table)
 
 To calculate the cumulative frequency table in Excel, simply add the frequency of each class to the frequency of all previous classes.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE, warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
 knitr::include_graphics(c("Chapter 1/Images/CF1.png","Chapter 1/Images/CF2.png","Chapter 1/Images/CF3.png","Chapter 1/Images/CF4.png","Chapter 1/Images/CF5.png"))
 
 ```
+
 The cumulative relative frequency and cumulative percentage frequency can be calculated as before.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE, warning=FALSE, message=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -457,7 +461,7 @@ To create a histogram in Excel, follow these steps:
 
 Step 1: Navigate to the Data Analysis option on the Data tab.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -467,7 +471,7 @@ knitr::include_graphics(c("Chapter 1/Images/Hist1.png"))
 
 Step 2: Select the Histogram option.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -477,7 +481,7 @@ knitr::include_graphics(c("Chapter 1/Images/Hist2.png"))
 
 Step 3: Select the data range. In this case, we are creating a histogram of the temperatures. Also make sure you have "Chat Output" ticked. You can choose whether to plot the histogram on the current worksheet or on a new worksheet.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -487,7 +491,7 @@ knitr::include_graphics(c("Chapter 1/Images/Hist3.png"))
 
 Step 4: The histogram with its bins (class limits) will be displayed.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -497,7 +501,7 @@ knitr::include_graphics(c("Chapter 1/Images/Hist4.png"))
 
 Step 5: Histograms typically do not have gaps between the bars. To improve how this histogram looks, right click on any of the bars of the histogram and select "Format Data Series".
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -507,7 +511,7 @@ knitr::include_graphics(c("Chapter 1/Images/Hist5.png"))
 
 Step 6: Change the "Gap Width" to 3% (or another small number).
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -517,7 +521,7 @@ knitr::include_graphics(c("Chapter 1/Images/Hist6.png"))
 
 Step 7: The final histogram will be displayed.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -527,7 +531,7 @@ knitr::include_graphics(c("Chapter 1/Images/Hist7.png"))
 
 In the steps above, we created a histogram and allowed Excel to define the class limits. But what if we had our own class limits that we wanted Excel to use? First, type out the class upper limits.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -537,7 +541,7 @@ knitr::include_graphics(c("Chapter 1/Images/Hist8.png"))
 
 Next, when you create the histogram, click on "Bin Range" and select the cells where you have typed out the class upper limits.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -546,7 +550,7 @@ knitr::include_graphics(c("Chapter 1/Images/Hist9.png"))
 ```
 
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -555,7 +559,7 @@ knitr::include_graphics(c("Chapter 1/Images/Hist10.png"))
 ```
 The histogram will now use your defined classes.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -565,7 +569,7 @@ knitr::include_graphics(c("Chapter 1/Images/Hist11.png"))
 
 Remove the legend and reduce the gaps between the bars to make the histogram look better.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -575,7 +579,7 @@ knitr::include_graphics(c("Chapter 1/Images/Hist12.png"))
 
 Notice that Excel has created an extra class called "More", for observations greater than 36 degrees Celsius. Since no such temperatures were observed, the "More" class is empty. Delete the cells to remove this class from the histogram.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -587,7 +591,7 @@ The histogram now looks quite good! Only one thing remains: the axis labels. The
 
 To do this, first create a column containing the values of the class midpoints. Then, right click on the histogram, select "Select Data" and then click on the Edit button under "Horizontal (Category) Axis Labels".
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -597,7 +601,7 @@ knitr::include_graphics(c("Chapter 1/Images/Hist14.png"))
 
 Select the cells containing the class midpoints.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -607,7 +611,7 @@ knitr::include_graphics(c("Chapter 1/Images/Hist15.png"))
 
 The final histogram now contains no empty categories, and is clear to read.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -623,7 +627,7 @@ Consider the Weather variable in the climate dataset. Weather is a categorical v
 
 Step 1: Click on Insert $\rightarrow$ PivotChart.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -632,7 +636,7 @@ knitr::include_graphics(c("Chapter 1/Images/Bar1.png"))
 ```
 Step 2: Select the data range (including the column header).
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -642,7 +646,7 @@ knitr::include_graphics(c("Chapter 1/Images/Bar2.png"))
 
 Step 3: In the PivotChart Fields pane, drag Weather into the Axis (Categories) and Values areas.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -652,7 +656,7 @@ knitr::include_graphics(c("Chapter 1/Images/Bar3.png"))
 
 Step 4: Remove the legend to make the chart simpler to read.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -662,7 +666,7 @@ knitr::include_graphics(c("Chapter 1/Images/Bar5.png"))
 
 What if you already had a Pivot Table, and just wanted to create a bar chart? In that case, simply click on Insert $\rightarrow$ 2D Column.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -670,7 +674,7 @@ knitr::include_graphics(c("Chapter 1/Images/Bar4.png"))
 
 ```
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -686,7 +690,7 @@ We will create a pie chart of the Air Quality variable in the climate dataset. A
 
 Step 1: Create a pivot table.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -696,7 +700,7 @@ knitr::include_graphics(c("Chapter 1/Images/Pie1.png"))
 
 Step 2: Drag AirQuality to the Rows and Values areas.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -706,7 +710,7 @@ knitr::include_graphics(c("Chapter 1/Images/Pie2.png"))
 
 Step 3: Click on the pivot table, and navigate to Insert $\rightarrow$ Recommended Charts $\rightarrow$ All Charts, and select Pie.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -716,7 +720,7 @@ knitr::include_graphics(c("Chapter 1/Images/Pie4.png"))
 
 Step 4: Format the chart (e.g. add a title) as desired.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -726,7 +730,7 @@ knitr::include_graphics(c("Chapter 1/Images/Pie5.png"))
 
 Step 6 (optional): Since pie charts represent percentages, we might want to display these percentages on the chart. To do this, right click on any of the slices of the pie, and click on Add Data Labels.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -736,7 +740,7 @@ knitr::include_graphics(c("Chapter 1/Images/Pie6.png"))
 
 Step 7 (optional): Format the text as desired.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -757,7 +761,7 @@ For this section, and the next, we will make use of the plant growth dataset. Th
 - Plant A Height: The height of plant A in cm.
 - Plant B Height: The height of plant B in cm.
 
-```{r, echo=FALSE}
+```{r, echo=FALSE,warning=FALSE}
 
 plant <- read_excel("Chapter 1/plant_growth_environment.xlsx")
 
@@ -769,7 +773,7 @@ Let's create a scatterplot showing the relationship between plant A's height and
 
 Step 1: Select the data columns and navigate to Insert $\rightarrow$ Recommended Charts $\rightarrow$ Scatter.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -777,7 +781,7 @@ knitr::include_graphics(c("Chapter 1/Images/Scatter1.png"))
 
 ```
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -787,7 +791,7 @@ knitr::include_graphics(c("Chapter 1/Images/Scatter9.png"))
 
 Step 2 (optional): Once the plot has been created, we can (optionally) change the values on the axes, so that there isn't as much white space on the plot.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -795,7 +799,7 @@ knitr::include_graphics(c("Chapter 1/Images/Scatter2.png"))
 
 ```
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -804,7 +808,7 @@ knitr::include_graphics(c("Chapter 1/Images/Scatter3.png"))
 ```
 
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -814,7 +818,7 @@ knitr::include_graphics(c("Chapter 1/Images/Scatter4.png"))
 
 Step 3 (optional): By right-clicking on any of the data points, and then clicking on "Add Trendline", we can add a line that shows the general trend of the points.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -823,7 +827,7 @@ knitr::include_graphics(c("Chapter 1/Images/Scatter5.png"))
 ```
 
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -833,7 +837,7 @@ knitr::include_graphics(c("Chapter 1/Images/Scatter6.png"))
 
 Step 4 (important!): When creating a scatterplot, Excel does not create axis titles by default. You can create axis titles by clicking on the plus next to the plot, and then checking the box next to "Axis Titles". 
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -843,7 +847,7 @@ knitr::include_graphics(c("Chapter 1/Images/Scatter7.png"))
 
 Step 5: Modify the axis titles to represent the variable names, and give the chart a meaningful title.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -860,7 +864,7 @@ Let us create a plot of the height of plant A over time.
 
 Step 1: Select the columns containing the data you want to plot, then navigate to Insert $\rightarrow$ Recommended Charts $\rightarrow$ All Charts $\rightarrow$ Line $\rightarrow$ choose the second option.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -870,7 +874,7 @@ knitr::include_graphics(c("Chapter 1/Images/Line1.png"))
 
 Step 2: Customise the chart title and axis titles.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -900,7 +904,7 @@ Although tables are very helpful, there is a wealth of information that can stil
 
 Kgomotso is a climate scientist who has collected a dataset on temperature, rainfall, humidity, wind speed, weather and air quality at 150 locations across a study area in South Africa. The first 6 entries in the dataset are shown below.
 
-```{r,echo=FALSE}
+```{r,echo=FALSE,warning=FALSE}
 
 library(dplyr)
 
@@ -972,7 +976,7 @@ Here, we can see that each observation (each $x_i$) has a coefficient of $\frac{
 
 A common example of a weighted mean is when a student's average mark is calculated taking the credits of each module into account. Suppose a student has the following academic record:
 
-```{r,echo=FALSE}
+```{r,echo=FALSE,warning=FALSE}
 
 student <- matrix(c("Module","Calculus","Physics","Scientific Literacy","Mark","70","65","58","Credits","16","12","8"),ncol=3)
 
@@ -994,7 +998,7 @@ The formula for the weighted mean is given as follows:
 $$\textrm{Weighted mean} = \frac{\sum_{i=1}^nw_ix_i}{\sum_{i=1}^nw_i}.$$
 The weighted mean in Excel needs to be calculated manually. The images below show how this can be done in the case of the student's marks.
 
-```{r, out.width= "50%", echo=FALSE,fig.align='center'}
+```{r, out.width= "50%", echo=FALSE,warning=FALSE,fig.align='center'}
 library(graphics)
 
 #par(mfrow=(c(2,2)))
@@ -1038,7 +1042,7 @@ This gives a value of 22,0443. Thus, he can say that 63% of the recorded tempera
 
 Much like percentiles, quartiles divide the data up into equal parts. Whereas percentiles divide the data up into 100 parts, quartiles divide the data into 4 parts, i.e. there are 4 quartiles. The table below shows the relationship between the quartiles and other measures of location.
 
-```{r,echo=FALSE}
+```{r,echo=FALSE,warning=FALSE}
 
 quartiles <- matrix(c("Quartile","Q1","Q2","Q3","Q4","Percentile","25th percentile","50th percentile","75th percentile","100th percentile","Other measure of location","","Median","","Maximum"),ncol=3)
 
@@ -1166,7 +1170,7 @@ We can quantify how skew a distribution is with a measure called **skewness**. F
 4. Fourth histogram (highly negatively skew): $\approx -3.0$ 
 
 
-```{r,echo=FALSE}
+```{r, echo=FALSE,message=FALSE,warning=FALSE}
 
 # Set seed for reproducibility
 set.seed(123)
@@ -1462,7 +1466,7 @@ The correlation coefficient can be interpreted as follows:
 
 The plot below illustrates how these relationships would look visually. Note that a correlation near 0 does not mean that the variables have *no* relationship - just that they do not have a *linear* relationship.
 
-```{r,echo=FALSE}
+```{r echo=FALSE, message=FALSE}
 # Load required packages
 library(ggplot2)
 library(dplyr)
