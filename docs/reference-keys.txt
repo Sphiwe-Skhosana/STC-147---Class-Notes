@@ -1,3 +1,4 @@
+fig:unnamed-chunk-3
 ch1
 what-is-descriptive-statistics
 example
@@ -63,12 +64,6 @@ independent-events
 multiplication-rule
 bayes-theorem
 inferential-statistics
-fig:unnamed-chunk-3
-statistical-inference-methods
-point-estimation
-interval-estimation
-hypothesis-testing
-inferential-statistics-1
 exm:ex1
 exm:ex2
 exm:ex3
