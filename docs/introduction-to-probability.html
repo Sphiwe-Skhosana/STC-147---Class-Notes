@@ -29,7 +29,7 @@ The HTML output format for this example is bookdown::gitbook,</p>" />
 <meta name="author" content="Department of Statistics, University of Pretoria" />
 
 
-<meta name="date" content="2025-07-16" />
+<meta name="date" content="2025-09-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -129,9 +129,9 @@ The HTML output format for this example is bookdown::gitbook,</p>" />
 <li class="chapter" data-level="2.3" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#assigning-probabilities"><i class="fa fa-check"></i><b>2.3</b> Assigning Probabilities</a>
 <ul>
 <li class="chapter" data-level="2.3.1" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#what-is-a-probability"><i class="fa fa-check"></i><b>2.3.1</b> What is a probability?</a></li>
-<li class="chapter" data-level="2.3.2" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#objective-method"><i class="fa fa-check"></i><b>2.3.2</b> Objective method</a></li>
-<li class="chapter" data-level="2.3.3" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#classical-probability"><i class="fa fa-check"></i><b>2.3.3</b> Classical probability</a></li>
-<li class="chapter" data-level="2.3.4" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#subjective-method"><i class="fa fa-check"></i><b>2.3.4</b> Subjective method</a></li>
+<li class="chapter" data-level="2.3.2" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#objective-approach"><i class="fa fa-check"></i><b>2.3.2</b> Objective approach</a></li>
+<li class="chapter" data-level="2.3.3" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#classical-approach"><i class="fa fa-check"></i><b>2.3.3</b> Classical approach</a></li>
+<li class="chapter" data-level="2.3.4" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#subjective-approach"><i class="fa fa-check"></i><b>2.3.4</b> Subjective approach</a></li>
 <li class="chapter" data-level="" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#exercises-2"><i class="fa fa-check"></i>Exercises</a></li>
 </ul></li>
 <li class="chapter" data-level="2.4" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#mathematical-properties-of-probability"><i class="fa fa-check"></i><b>2.4</b> Mathematical properties of probability</a>
@@ -163,7 +163,15 @@ The HTML output format for this example is bookdown::gitbook,</p>" />
 <li class="chapter" data-level="" data-path="introduction-to-probability.html"><a href="introduction-to-probability.html#exercises-7"><i class="fa fa-check"></i>Exercises</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="inferential-statistics.html"><a href="inferential-statistics.html"><i class="fa fa-check"></i><b>3</b> Inferential Statistics</a></li>
+<li class="chapter" data-level="3" data-path="inferential-statistics.html"><a href="inferential-statistics.html"><i class="fa fa-check"></i><b>3</b> Inferential Statistics</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="inferential-statistics.html"><a href="inferential-statistics.html#statistical-inference-methods"><i class="fa fa-check"></i><b>3.1</b> Statistical inference methods</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="inferential-statistics.html"><a href="inferential-statistics.html#point-estimation"><i class="fa fa-check"></i><b>3.1.1</b> Point estimation</a></li>
+<li class="chapter" data-level="3.1.2" data-path="inferential-statistics.html"><a href="inferential-statistics.html#interval-estimation"><i class="fa fa-check"></i><b>3.1.2</b> Interval estimation</a></li>
+<li class="chapter" data-level="3.1.3" data-path="inferential-statistics.html"><a href="inferential-statistics.html#hypothesis-testing"><i class="fa fa-check"></i><b>3.1.3</b> Hypothesis testing</a></li>
+</ul></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://clickup.up.ac.za/ultra/courses/_182239_1/outline" target="blank">ClickUP</a></li>
 
@@ -625,17 +633,13 @@ the event <span class="math inline">\(F\)</span> is <span class="math inline">\(
 </ol>
 </div>
 <p>We next turn to the main question of this section which is on how to
-assign probabilities to events. There are two general methods for
-assigning probabilities to events: the objective method and the
-subjective method. The <strong>objective method</strong> involves assigning
-probabilities to events based on counting or repeated experiments. On
-the other hand, the objective method involves assigning probabilities to
-events based on intuition or personal belief. We now discuss each method
+assign probabilities to events. There are three approaches for
+assigning probabilities to events: the objective approach, the classical approach and the subjective approach. On the other hand We now discuss each method
 in turn.</p>
 </div>
-<div id="objective-method" class="section level3 hasAnchor" number="2.3.2">
-<h3><span class="header-section-number">2.3.2</span> Objective method<a href="introduction-to-probability.html#objective-method" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Consider an experiment that can be repeatedly performed in an identical
+<div id="objective-approach" class="section level3 hasAnchor" number="2.3.2">
+<h3><span class="header-section-number">2.3.2</span> Objective approach<a href="introduction-to-probability.html#objective-approach" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The <strong>objective approach</strong> involves assigning probabilities to events based on the proportion of times that events of the same kind will occur in the long run. Consider an experiment that can be repeatedly performed in an identical
 and independent fashion and let <span class="math inline">\(A\)</span> be an event consisting of a fixed
 set of outcomes of the experiment. Simple examples of repeatable
 experiments include tossing a coin and rolling a die. If the experiment
@@ -703,15 +707,11 @@ Figure 2.3: Tree diagram for the experiment of tossing two coins
 </ol>
 </div>
 </div>
-<div id="classical-probability" class="section level3 hasAnchor" number="2.3.3">
-<h3><span class="header-section-number">2.3.3</span> Classical probability<a href="introduction-to-probability.html#classical-probability" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>If an experiment has a finite number, <span class="math inline">\(n\)</span>, of outcomes that we believe
-are equally likely to occur, we can assign each outcome in the sample
-space <span class="math inline">\(S\)</span> a probability value of <span class="math inline">\(1/n\)</span>. This is a consequence of the
-second property of a probability, which states that the sum of the
-probabilities for a sample space must be <span class="math inline">\(1\)</span>. Then if <span class="math inline">\(E\)</span> is an event
-containing <span class="math inline">\(n(E)\)</span> outcomes, the probability of <span class="math inline">\(E\)</span> occurring is simply
-<span class="math inline">\(n(E)/n\)</span>. Thus, we have the following basic fact:</p>
+<div id="classical-approach" class="section level3 hasAnchor" number="2.3.3">
+<h3><span class="header-section-number">2.3.3</span> Classical approach<a href="introduction-to-probability.html#classical-approach" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The classical approach to assigning probabilities considers the case when all the outcomes are equally likely to occur.
+Consider an experiment with a finite number, <span class="math inline">\(n\)</span>, of outcomes that we believe are equally likely to occur. We can assign each outcome in the sample space <span class="math inline">\(S\)</span> a probability value of <span class="math inline">\(1/n\)</span>. This is a consequence of the second property of a probability, which states that the sum of the probabilities for a sample space must be <span class="math inline">\(1\)</span>. Then if <span class="math inline">\(E\)</span> is an event
+containing <span class="math inline">\(n(E)\)</span> outcomes, the probability of <span class="math inline">\(E\)</span> occurring is simply <span class="math inline">\(n(E)/n\)</span>. Thus, we have the following basic fact:</p>
 <p>*If <span class="math inline">\(S\)</span> is a sample space of <strong>equally likely outcomes</strong>, then
 <span class="math inline">\(P(E)=n(E)/n\)</span>,</p>
 <p>where <span class="math inline">\(n(E)\)</span> is the number of outcomes in <span class="math inline">\(E\)</span> and <span class="math inline">\(n\)</span> is the number of
@@ -756,8 +756,8 @@ sum of <span class="math inline">\(13\)</span> is impossible, <span class="math 
 </ol>
 </div>
 </div>
-<div id="subjective-method" class="section level3 hasAnchor" number="2.3.4">
-<h3><span class="header-section-number">2.3.4</span> Subjective method<a href="introduction-to-probability.html#subjective-method" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="subjective-approach" class="section level3 hasAnchor" number="2.3.4">
+<h3><span class="header-section-number">2.3.4</span> Subjective approach<a href="introduction-to-probability.html#subjective-approach" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The objective method of assigning probabilities is limited to
 experimental situations that are repeatable. However, many real-world
 experimental situations are unrepeatable. For instance, the chances of a
