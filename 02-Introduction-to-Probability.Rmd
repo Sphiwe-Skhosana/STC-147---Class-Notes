@@ -502,7 +502,7 @@ approach are said to be **empirical**. According to the empirical
 approach to probability, if $A$ is an event, $P(A)$ is approximately
 equal to $f/n$, where $f$ is the number of favorable outcomes and $n$ is
 the number of repetitions of the experiment. Thus, $P(A)\approx f/n$.
-For example, consider again the coin-tossing experiment in Table. The
+For example, consider again the coin-tossing experiment. The
 relative frequency can serve as an estimate of the probability $P(H)$.
 To get a better estimate, we could consider tossing the coin $3000$ or
 $5000$ times or even more.
