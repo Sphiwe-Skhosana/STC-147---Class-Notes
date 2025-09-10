@@ -465,7 +465,7 @@ assign probabilities to events. There are three approaches for
 assigning probabilities to events: the objective approach, the classical approach and the subjective approach. On the other hand We now discuss each method
 in turn.
 
-### Objective method
+### Objective approach
 The **objective approach** involves assigning probabilities to events based on the proportion of times that events of the same kind will occur in the long run. Consider an experiment that can be repeatedly performed in an identical
 and independent fashion and let $A$ be an event consisting of a fixed
 set of outcomes of the experiment. Simple examples of repeatable
@@ -535,7 +535,7 @@ b.  $P(N\leq 59)=0.103+0.340+0.343+0.157=0.943$
 c.  $P(60<NBT<79)=0.043$
 :::
 
-### Classical probability
+### Classical approach
 The classical approach to assigning probabilities considers the case when all the outcomes are equally likely to occur.
 Consider an experiment with a finite number, $n$, of outcomes that we believe are equally likely to occur. We can assign each outcome in the sample space $S$ a probability value of $1/n$. This is a consequence of the second property of a probability, which states that the sum of the probabilities for a sample space must be $1$. Then if $E$ is an event
 containing $n(E)$ outcomes, the probability of $E$ occurring is simply $n(E)/n$. Thus, we have the following basic fact:

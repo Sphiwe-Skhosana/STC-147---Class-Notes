@@ -101,3 +101,5 @@ exm:unlabeled-div-2
 def:Bayes
 exm:unlabeled-div-3
 subjective-approach
+objective-approach
+classical-approach
