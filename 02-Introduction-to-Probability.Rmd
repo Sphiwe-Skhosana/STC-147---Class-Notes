@@ -461,17 +461,12 @@ d.  $P(E~and~F)=P(E\cap F)=0$, because $E\cap F=\emptyset$.
 :::
 
 We next turn to the main question of this section which is on how to
-assign probabilities to events. There are two general methods for
-assigning probabilities to events: the objective method and the
-subjective method. The **objective method** involves assigning
-probabilities to events based on counting or repeated experiments. On
-the other hand, the objective method involves assigning probabilities to
-events based on intuition or personal belief. We now discuss each method
+assign probabilities to events. There are three approaches for
+assigning probabilities to events: the objective approach, the classical approach and the subjective approach. On the other hand We now discuss each method
 in turn.
 
 ### Objective method
-
-Consider an experiment that can be repeatedly performed in an identical
+The **objective approach** involves assigning probabilities to events based on the proportion of times that events of the same kind will occur in the long run. Consider an experiment that can be repeatedly performed in an identical
 and independent fashion and let $A$ be an event consisting of a fixed
 set of outcomes of the experiment. Simple examples of repeatable
 experiments include tossing a coin and rolling a die. If the experiment
@@ -541,14 +536,9 @@ c.  $P(60<NBT<79)=0.043$
 :::
 
 ### Classical probability
-
-If an experiment has a finite number, $n$, of outcomes that we believe
-are equally likely to occur, we can assign each outcome in the sample
-space $S$ a probability value of $1/n$. This is a consequence of the
-second property of a probability, which states that the sum of the
-probabilities for a sample space must be $1$. Then if $E$ is an event
-containing $n(E)$ outcomes, the probability of $E$ occurring is simply
-$n(E)/n$. Thus, we have the following basic fact:
+The classical approach to assigning probabilities considers the case when all the outcomes are equally likely to occur.
+Consider an experiment with a finite number, $n$, of outcomes that we believe are equally likely to occur. We can assign each outcome in the sample space $S$ a probability value of $1/n$. This is a consequence of the second property of a probability, which states that the sum of the probabilities for a sample space must be $1$. Then if $E$ is an event
+containing $n(E)$ outcomes, the probability of $E$ occurring is simply $n(E)/n$. Thus, we have the following basic fact:
 
 \*If $S$ is a sample space of **equally likely outcomes**, then
 $P(E)=n(E)/n$,
@@ -597,8 +587,7 @@ e.  Let $E_5$ be the event that the two dice show a sum of $13$. Since a
     sum of $13$ is impossible, $E_6=\emptyset$. Thus, $P(E_6)=0$.
 :::
 
-### Subjective method
-
+### Subjective approach
 The objective method of assigning probabilities is limited to
 experimental situations that are repeatable. However, many real-world
 experimental situations are unrepeatable. For instance, the chances of a
