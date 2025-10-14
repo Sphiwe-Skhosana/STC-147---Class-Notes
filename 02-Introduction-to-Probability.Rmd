@@ -266,9 +266,10 @@ f.  All outcomes in $S$ that are not listed in part (b) have a sum that
 
 3.  For each of the following experiments, define the simple events.
 
-    a. A coin is tossed twice and the upper face (head or tail) is recorded for each toss.
-    b. Three children are randomly selected and their gender is recorded
-
+    a.  A coin is tossed twice and the upper face (head or tail) is
+        recorded for each toss.
+    b.  Three children are randomly selected and their gender is
+        recorded
 
 4.  Let $C$ be the event that tomorrow's weather is hot, and $D$ the
     event that it rains tomorrow. Describe (in words) the following
@@ -276,7 +277,6 @@ f.  All outcomes in $S$ that are not listed in part (b) have a sum that
 
     a.  $C$ or $D$
     b.  $C$ and $D$
-
 
 5.  An experiment consists of asking three shoppers at random if they
     buy brand A peanut butter. Let $Y$ denote yes and $N$ denote no. Let
@@ -290,7 +290,7 @@ f.  All outcomes in $S$ that are not listed in part (b) have a sum that
     b.  $F$
     c.  $E$ or $F$
     d.  $E$ and $F$
-    
+
 ## Some relationships between events
 
 An event is nothing but a set. Therefore, relationships and results from
@@ -313,7 +313,6 @@ c.  The **complement** of an event $A$, denoted by $A^c$, is the set of
 
 ::: {#ex5 .example}
 Consider the experiment of rolling a balanced six-sided die.
-
 
 Let $A=\{1,3,5\}$, $B=\{2,4,6\}$ and $C=\{1,2,3\}$. Then
 
@@ -372,9 +371,9 @@ knitr::include_graphics("Figures/Venn-diagrams.png")
 
 <!-- -->
 
-  a.  Cumesh is hired but not Fani
-  b.  At least one of the is hired
-  c.  Excactly one of them is hired
+a.  Cumesh is hired but not Fani
+b.  At least one of the is hired
+c.  Excactly one of them is hired
 
 <!-- -->
 
@@ -385,8 +384,8 @@ knitr::include_graphics("Figures/Venn-diagrams.png")
 
 <!-- -->
 
-  a.  List all the possible outcomes
-  b.  Suppose a running tally is kept as slips are removed. For what
+a.  List all the possible outcomes
+b.  Suppose a running tally is kept as slips are removed. For what
     outcomes does $A$ remain ahead of $B$ throughout the tally.
 
 <!-- -->
@@ -395,11 +394,11 @@ knitr::include_graphics("Figures/Venn-diagrams.png")
 
 <!-- -->
 
-  a.  $E=$ Mrs. Botha gives birth to twins. $F=$ A mother gives birth to a
+a.  $E=$ Mrs. Botha gives birth to twins. $F=$ A mother gives birth to a
     girl
-  b.  $E=$ Lebogang fails the last Statistics test $F=$ Lebogang passes
+b.  $E=$ Lebogang fails the last Statistics test $F=$ Lebogang passes
     the course
-  c.  $E=$ Kwanele goes to the movies $F=$ Kwanele eats pop-corn
+c.  $E=$ Kwanele goes to the movies $F=$ Kwanele eats pop-corn
 
 <!-- -->
 
@@ -412,10 +411,10 @@ knitr::include_graphics("Figures/Venn-diagrams.png")
 
 <!-- -->
 
-  a.  At least one assignment is completed by the due date.
-  b.  All the assignments are completed by the due date.
-  c.  Only the first assignment is completed by the due date.
-  d.  Exactly one assignment is completed by the due date.
+a.  At least one assignment is completed by the due date.
+b.  All the assignments are completed by the due date.
+c.  Only the first assignment is completed by the due date.
+d.  Exactly one assignment is completed by the due date.
 
 ## Assigning Probabilities
 
@@ -461,26 +460,30 @@ d.  $P(E~and~F)=P(E\cap F)=0$, because $E\cap F=\emptyset$.
 :::
 
 We next turn to the main question of this section which is on how to
-assign probabilities to events. There are three approaches for
-assigning probabilities to events: the objective approach, the classical approach and the subjective approach. On the other hand We now discuss each method
-in turn.
+assign probabilities to events. There are three approaches for assigning
+probabilities to events: the objective approach, the classical approach
+and the subjective approach. On the other hand We now discuss each
+method in turn.
 
 ### Objective approach
-The **objective approach** involves assigning probabilities to events based on the proportion of times that events of the same kind will occur in the long run. Consider an experiment that can be repeatedly performed in an identical
-and independent fashion and let $A$ be an event consisting of a fixed
-set of outcomes of the experiment. Simple examples of repeatable
-experiments include tossing a coin and rolling a die. If the experiment
-is performed $n$ times, on some of the replications the event $A$ will
-occur and on some $A$ will not occur. Let $n(A)$ denote the number of
-replications on which $A$ does occur. Then the ratio $n(A)/n$ is called
-the **relative frequency** of occurrence of the event $A$ in the $n$
-replications. The empirical evidence based on the results of many of the
-sequences of repeatable experiments indicate that as $n$ becomes large,
-the relative frequency stabilizes. That is, as $n$ gets large, the
-relative frequency approaches a limiting value referred to as the
-limiting relative frequency of the event $A$. The objective method of
-assigning probability identifies this limiting relative frequency with
-$P(A)$. Thus, if an experiment is repeatable, we can assign
+
+The **objective approach** involves assigning probabilities to events
+based on the proportion of times that events of the same kind will occur
+in the long run. Consider an experiment that can be repeatedly performed
+in an identical and independent fashion and let $A$ be an event
+consisting of a fixed set of outcomes of the experiment. Simple examples
+of repeatable experiments include tossing a coin and rolling a die. If
+the experiment is performed $n$ times, on some of the replications the
+event $A$ will occur and on some $A$ will not occur. Let $n(A)$ denote
+the number of replications on which $A$ does occur. Then the ratio
+$n(A)/n$ is called the **relative frequency** of occurrence of the event
+$A$ in the $n$ replications. The empirical evidence based on the results
+of many of the sequences of repeatable experiments indicate that as $n$
+becomes large, the relative frequency stabilizes. That is, as $n$ gets
+large, the relative frequency approaches a limiting value referred to as
+the limiting relative frequency of the event $A$. The objective method
+of assigning probability identifies this limiting relative frequency
+with $P(A)$. Thus, if an experiment is repeatable, we can assign
 probabilities to the outcomes in accordance with their limiting relative
 frequencies. As an example, The table below contains the number of heads
 obtained when a fair coin was tossed $n$ times, as well as the relative
@@ -502,10 +505,10 @@ approach are said to be **empirical**. According to the empirical
 approach to probability, if $A$ is an event, $P(A)$ is approximately
 equal to $f/n$, where $f$ is the number of favorable outcomes and $n$ is
 the number of repetitions of the experiment. Thus, $P(A)\approx f/n$.
-For example, consider again the coin-tossing experiment. The
-relative frequency can serve as an estimate of the probability $P(H)$.
-To get a better estimate, we could consider tossing the coin $3000$ or
-$5000$ times or even more.
+For example, consider again the coin-tossing experiment. The relative
+frequency can serve as an estimate of the probability $P(H)$. To get a
+better estimate, we could consider tossing the coin $3000$ or $5000$
+times or even more.
 
 ::: {#ex9 .example}
 The NBT math scores for 18790 students at a large university are given
@@ -536,9 +539,16 @@ c.  $P(60<NBT<79)=0.043$
 :::
 
 ### Classical approach
-The classical approach to assigning probabilities considers the case when all the outcomes are equally likely to occur.
-Consider an experiment with a finite number, $n$, of outcomes that we believe are equally likely to occur. We can assign each outcome in the sample space $S$ a probability value of $1/n$. This is a consequence of the second property of a probability, which states that the sum of the probabilities for a sample space must be $1$. Then if $E$ is an event
-containing $n(E)$ outcomes, the probability of $E$ occurring is simply $n(E)/n$. Thus, we have the following basic fact:
+
+The classical approach to assigning probabilities considers the case
+when all the outcomes are equally likely to occur. Consider an
+experiment with a finite number, $n$, of outcomes that we believe are
+equally likely to occur. We can assign each outcome in the sample space
+$S$ a probability value of $1/n$. This is a consequence of the second
+property of a probability, which states that the sum of the
+probabilities for a sample space must be $1$. Then if $E$ is an event
+containing $n(E)$ outcomes, the probability of $E$ occurring is simply
+$n(E)/n$. Thus, we have the following basic fact:
 
 \*If $S$ is a sample space of **equally likely outcomes**, then
 $P(E)=n(E)/n$,
@@ -588,6 +598,7 @@ e.  Let $E_5$ be the event that the two dice show a sum of $13$. Since a
 :::
 
 ### Subjective approach
+
 The objective method of assigning probabilities is limited to
 experimental situations that are repeatable. However, many real-world
 experimental situations are unrepeatable. For instance, the chances of a
@@ -735,7 +746,7 @@ $P(\text{at least one of the services from the company})=P(A)+P(B)-P(A\cap B)=0.
 
 a.  Calculate the probability that the selected student uses at least
     one of the two chatbots (i.e. the probability of the event
-    $P(A\cap B)$).
+    $P(A\cup B)$).
 b.  What is the probability that the selected student uses neither of
     the two chatbots?
 c.  Describe, in terms of $A$ and $B$, the event that the selected
