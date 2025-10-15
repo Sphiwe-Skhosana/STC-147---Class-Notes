@@ -379,8 +379,8 @@ c.  Excactly one of them is hired
 
 2.  An academic department has just completed voting by secret ballot
     for a department head. The ballot box contains four slips with votes
-    for candidate $B$. Suppose these slips are removed from the box one
-    by one.
+    for candidate $B$ and three with votes for candidate $A$. Suppose
+    these slips are removed from the box one by one.
 
 <!-- -->
 
