@@ -1458,7 +1458,7 @@ Agency 2 is $0.3$ - Given that it needs an oil change, the new
 
 1.  A sample is selected from one of two populations, $S_1$ and $S_2$,
     with $P(S_1)=0.7$ and $P(S_2)=0.3$. The probabilities that an event
-    $A$ occurs, given $P(A|S_1)=0.2$ and $P(A|S_2)$, calculate
+    $A$ occurs, given $P(A|S_1)=0.2$ and $P(A|S_2)=0.4$, calculate
 
 <!-- -->
 
