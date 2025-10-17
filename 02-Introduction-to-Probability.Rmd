@@ -4,7 +4,7 @@ editor_options:
     wrap: 72
 ---
 
-# Introduction to Probability
+# Introduction to Probability {#ch2}
 
 Now that you have learned about data, how to collect it and summarise
 it, you are now ready to make use of the sample data to draw meaningful

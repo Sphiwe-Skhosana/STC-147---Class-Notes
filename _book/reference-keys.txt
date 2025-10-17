@@ -103,3 +103,8 @@ exm:unlabeled-div-3
 subjective-approach
 objective-approach
 classical-approach
+fig:sample
+ch2
+fig:test
+errors-of-a-hypothesis-test
+fig:test1
